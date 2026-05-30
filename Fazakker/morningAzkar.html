@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أذكار الصباح | شروق البحر</title>
+    <!-- Tailwind CSS for modern layout scaffolding -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Google Fonts for Elegant Arabic and English Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Estedad:wght@100..900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Playpen+Sans+Arabic:wght@100..800&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Bartle&family=BBH+Hegarty&family=Blaka+Ink&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Estedad:wght@100..900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Playpen+Sans+Arabic:wght@100..800&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* Animated Coastal Sunrise Background */
+            background: linear-gradient(180deg, #ffedd5 0%, #fef08a 25%, #bae6fd 60%, #0284c7 100%);
+            background-size: 100% 200%;
+            animation: sunriseMotion 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes sunriseMotion {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 0% 100%; }
+        }
+
+        .title-font {
+            font-family: 'Reem Kufi', sans-serif;
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            line-height: 2.3;
+        }
+
+        /* Translucent Sea-Mist Glass Card */
+        .sea-glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 15px 35px rgba(2, 132, 199, 0.08), 
+                        0 5px 15px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Floating Flower Petals Animation */
+        .petal {
+            position: absolute;
+            background: linear-gradient(to bottom right, #f472b6, #f43f5e);
+            border-radius: 150% 0 150% 150%;
+            opacity: 0.3;
+            pointer-events: none;
+            animation: floatPetal 10s linear infinite;
+        }
+
+        @keyframes floatPetal {
+            0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% { transform: translateY(110vh) translateX(100px) rotate(360deg); opacity: 0; }
+        }
+
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen relative pb-32 overflow-x-hidden">
+
+    <!-- Ambient Glowing Sun Orb in Background -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-300/40 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <!-- Floating Flower Petals (Generated dynamically via CSS/JS positions) -->
+    <div class="petal w-3 h-4 left-[10%]" style="animation-duration: 8s; animation-delay: 0s;"></div>
+    <div class="petal w-4 h-5 left-[40%]" style="animation-duration: 12s; animation-delay: 2s; background: linear-gradient(to bottom right, #e879f9, #cc5de8);"></div>
+    <div class="petal w-3 h-3 left-[75%]" style="animation-duration: 10s; animation-delay: 4s;"></div>
+    <div class="petal w-5 h-6 left-[90%]" style="animation-duration: 14s; animation-delay: 1s;"></div>
+
+    <!-- App Header Area -->
+    <header class="max-w-4xl mx-auto pt-14 pb-12 px-6 text-center relative z-10">
+
+    <!-- Soft Background Depth (NO over-glow) -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+
+        <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[520px] h-[520px]
+                    bg-gradient-to-b from-amber-200/40 via-sky-200/30 to-transparent
+                    rounded-full blur-[90px]"></div>
+
+    </div>
+
+    <!-- Glass Badge -->
+    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full
+                bg-white/50 backdrop-blur-xl border border-white/60
+                shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+                mb-6">
+
+        <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+
+        <span class="text-sky-900 text-xs md:text-sm font-semibold tracking-[0.25em] uppercase">
+            Morning Azkar
+        </span>
+
+    </div>
+
+    <!-- Main Title (3D Depth Text) -->
+    <h1 class="title-font text-4xl md:text-6xl font-extrabold text-sky-950 leading-tight">
+
+        <span class="block relative">
+            أَذْكَارُ الصَّبَاح
+
+            <!-- subtle shadow layer for 3D depth -->
+            <span class="absolute left-0 top-1 text-sky-900/10 blur-sm -z-10">
+                أَذْكَارُ الصَّبَاح
+            </span>
+        </span>
+
+        <span style="font-family: BBH Hegarty;font-size: 22px;" class="block text-base md:text-xl mt-3 text-sky-800/70 font-light tracking-wide">
+            Morning <br> Remembrance
+        </span>
+
+    </h1>
+
+    <!-- Soft description -->
+    <p style="font-family: Caveat; font-size: 25px;" class="mt-5 text-sm md:text-base text-sky-900/70 max-w-md mx-auto leading-relaxed">
+        Begin your morning with calm remembrance, light, and peace of heart.
+    </p>
+
+    <!-- Bottom Glass Line (subtle UI depth) -->
+    <div class="mt-10 flex justify-center">
+
+        
+
+    </div>
+
+</header>
+
+    <!-- Main Content Stream -->
+    <main class="max-w-2xl mx-auto px-4 space-y-6 relative z-10">
+
+        <!-- Card 1: Ayat Al-Kursi -->
+        <div class="sea-glass-card rounded-3xl p-6 md:p-8 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl group">
+            <div class="flex justify-between items-center mb-4">
+                <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">آية الكرسي</span>
+                <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-2.5 py-0.5 rounded-md">Recite 1x</span>
+            </div>
+            
+            <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6">
+                اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّلهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+            </p>
+
+            <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+                <p class="text-sky-950/70 text-sm leading-relaxed font-light italic">
+                    "Allah! There is no deity except Him, the Ever-Living, the Sustainer of all existence. Neither drowsiness overtakes Him nor sleep..."
+                </p>
+            </div>
+
+            <!-- Card Controls -->
+            <div class="flex justify-between items-center pt-2">
+                <!-- Audio Player Button -->
+                <div class="flex items-center gap-2" dir="ltr">
+                    <audio id="audio-1" src="https://server11.mp3quran.net/yasser/002255.mp3" preload="none"></audio>
+                    <button onclick="toggleAudio(1, this)" class="w-10 h-10 rounded-full bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center shadow-md transition-colors focus:outline-none">
+                        <svg class="w-4 h-4 play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="w-4 h-4 pause-icon hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+                    <span class="text-xs text-sky-900/60 font-medium">Listen Recitation</span>
+                </div>
+
+                <!-- Tally Counter UI -->
+                <button onclick="incrementTally(this, 1)" class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md hover:shadow-lg transition-all active:scale-95 group focus:outline-none">
+                    <svg class="absolute w-14 h-14">
+                        <circle class="text-slate-100" stroke-width="3" stroke="currentColor" fill="transparent" r="24" cx="28" cy="28"/>
+                        <circle class="text-emerald-500 progress-ring-circle" stroke-dasharray="150.8" stroke-dashoffset="150.8" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="transparent" r="24" cx="28" cy="28"/>
+                    </svg>
+                    <span class="count-display text-base font-bold text-slate-700 group-hover:text-emerald-600">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 2: Al-Ikhlas -->
+        <div class="sea-glass-card rounded-3xl p-6 md:p-8 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl group">
+            <div class="flex justify-between items-center mb-4">
+                <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">سورة الإخلاص</span>
+                <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-2.5 py-0.5 rounded-md">Recite 3x</span>
+            </div>
+            
+            <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br><br>
+                قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ۝
+            </p>
+
+            <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+                <p class="text-sky-950/70 text-sm leading-relaxed font-light italic">
+                    "Say, He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is born, nor is there to Him any equivalent."
+                </p>
+            </div>
+
+            
+
+            
+
+            <!-- Card Controls -->
+            <div class="flex justify-between items-center pt-2">
+                <div class="flex items-center gap-2" dir="ltr">
+                    <audio id="audio-2" src="https://server11.mp3quran.net/yasser/112.mp3" preload="none"></audio>
+                    <button onclick="toggleAudio(2, this)" class="w-10 h-10 rounded-full bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center shadow-md transition-colors focus:outline-none">
+                        <svg class="w-4 h-4 play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="w-4 h-4 pause-icon hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+                    <span class="text-xs text-sky-900/60 font-medium">Listen Recitation</span>
+                </div>
+
+                <button onclick="incrementTally(this, 3)" class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md hover:shadow-lg transition-all active:scale-95 group focus:outline-none">
+                    <svg class="absolute w-14 h-14">
+                        <circle class="text-slate-100" stroke-width="3" stroke="currentColor" fill="transparent" r="24" cx="28" cy="28"/>
+                        <circle class="text-emerald-500 progress-ring-circle" stroke-dasharray="150.8" stroke-dashoffset="150.8" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="transparent" r="24" cx="28" cy="28"/>
+                    </svg>
+                    <span class="count-display text-base font-bold text-slate-700 group-hover:text-emerald-600">0</span>
+                </button>
+            </div>
+        </div>
+
+   
+
+<!-- CARD : سورة الفلق -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <div class="flex justify-between items-center mb-5">
+
+        <span
+            class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            سورة الفلق
+        </span>
+
+        <span
+            class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <p class="arabic-text text-2xl text-right text-slate-900 font-medium mb-6">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br><br>
+
+        قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝
+        مِن شَرِّ مَا خَلَقَ ۝
+        وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝
+        وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝
+        وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ۝
+    </p>
+
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            "Say: I seek refuge in the Lord of daybreak..."
+        </p>
+
+    </div>
+
+    <div class="flex justify-between items-center">
+
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-4"
+                src="https://server11.mp3quran.net/yasser/113.mp3"
+                preload="none"></audio>
+
+            <button onclick="toggleAudio(4, this)"
+                class="w-11 h-11 rounded-full bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center shadow-lg">
+
+                <svg class="w-4 h-4 play-icon"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
+
+                <svg class="w-4 h-4 pause-icon hidden"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+
+            </button>
+
+            <span class="text-xs text-sky-900/60">
+                Listen Reaction
+            </span>
+
+        </div>
+
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md active:scale-95">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100"
+                    stroke-width="3"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24"
+                    cx="28"
+                    cy="28" />
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24"
+                    cx="28"
+                    cy="28" />
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : سورة الناس -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span
+            class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            سورة الناس
+        </span>
+
+        <span
+            class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Ayah -->
+    <p class="arabic-text text-2xl text-right text-slate-900 font-medium mb-6">
+
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br><br>
+
+        قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝
+        مَلِكِ النَّاسِ ۝
+        إِلَٰهِ النَّاسِ ۝
+        مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝
+        الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝
+        مِنَ الْجِنَّةِ وَالنَّاسِ ۝
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            "Say: I seek refuge in the Lord of mankind..."
+        </p>
+
+    </div>
+
+    <!-- Card Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-5"
+                src="https://server11.mp3quran.net/yasser/114.mp3"
+                preload="none"></audio>
+
+            <button onclick="toggleAudio(5, this)"
+                class="w-11 h-11 rounded-full bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center shadow-lg transition-all duration-300">
+
+                <!-- Play -->
+                <svg class="w-4 h-4 play-icon"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
+
+                <!-- Pause -->
+                <svg class="w-4 h-4 pause-icon hidden"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+
+            </button>
+
+            <span class="text-xs text-sky-900/60">
+                Listen
+            </span>
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md hover:shadow-lg transition-all active:scale-95">
+
+            <svg class="absolute w-14 h-14">
+
+                <!-- Background -->
+                <circle class="text-slate-100"
+                    stroke-width="3"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24"
+                    cx="28"
+                    cy="28" />
+
+                <!-- Progress -->
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24"
+                    cx="28"
+                    cy="28" />
+
+            </svg>
+
+            <!-- Count -->
+            <span class="count-display text-base font-bold text-slate-700">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : أذكار الصباح -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            ذكر الصباح
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        أَصْـبَحْنا وَأَصْـبَحَ المُـلْكُ للهِ وَالحَمْدُ للهِ،
+        لا إِلٰهَ إِلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْد،
+        وَهُوَ على كلّ شَيءٍ قدير،
+
+        رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذا اليوم وَخَـيرَ ما بَعْـدَه،
+        وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذا اليوم وَشَرِّ ما بَعْـدَه،
+
+        رَبِّ أَعـوذُ بِكَ مِنَ الْكَسَـلِ وَسُوءِ الْكِبَر،
+        رَبِّ أَعـوذُ بِكَ مِنْ عَـذابٍ في النّـارِ وَعَـذابٍ في القَـبْر.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            Morning remembrance seeking Allah’s protection and blessings for the day.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-6"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : سيد الاستغفار -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            سيد الاستغفار
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهـمَّ أَنْتَ رَبِّـي لا إلهَ إلاّ أَنْتَ،
+        خَلَقْتَنـي وَأَنا عَبْـدُك،
+        وَأَنا عَلـى عَهْـدِكَ وَوَعْـدِكَ ما اسْتَـطَعْـت،
+        أَعـوذُبِكَ مِنْ شَـرِّ ما صَنَـعْت،
+        أَبـوءُ لَـكَ بِنِعْـمَتِـكَ عَلَـيَّ وَأَبـوءُ بِذَنْـبي،
+        فَاغْفـِرْ لي فَإِنَّهُ لا يَغْـفِرُ الذُّنـوبَ إِلاّ أَنْتَ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            The best seeking of forgiveness (Sayyid al-Istighfar).
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-7"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : رضيت بالله رباً -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الرضا
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        رَضيـتُ بِاللهِ رَبَّـاً،
+        وَبِالإسْلامِ ديـناً،
+        وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـاً.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            I am pleased with Allah as my Lord, Islam as my religion, and Muhammad ﷺ as my Prophet.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-8"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+<!-- CARD : دعاء الشهادة -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الشهادة
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 4x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks as requested) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, I have entered the morning calling You to witness…
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-9"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,4)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء شكر النعمة -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الشكر
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ ما أَصْبَـحَ بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ،
+        فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ،
+        فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, whatever blessing I or anyone of Your creation has received is from You alone...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-10"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء شكر النعمة -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الشكر
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ ما أَصْبَـحَ بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ،
+        فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ،
+        فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, whatever blessing I or anyone of Your creation has received is from You alone...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-10"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الحفظ -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الحفظ
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ،
+        وَهـوَ السّمـيعُ العَلـيم.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            In the name of Allah with whose name nothing can harm...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-12"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : بك أصبحنا -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الصباح
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ بِكَ أَصْـبَحْنا وَبِكَ أَمْسَـينا،
+        وَبِكَ نَحْـيا وَبِكَ نَمُـوتُ،
+        وَإِلَـيْكَ النُّـشُور.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, by You we enter the morning and by You we enter the evening...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-13"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : على الفطرة -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الفطرة
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks as requested) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        أَصْبَـحْـنا عَلَى فِطْرَةِ الإسْلاَمِ، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِينَا إبْرَاهِيمَ حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ المُشْرِكِينَ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            We have entered the morning upon the natural faith of Islam...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-14"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : تسبيح -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            تسبيح
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه ، وَرِضـا نَفْسِـه ، وَزِنَـةَ عَـرْشِـه ، وَمِـدادَ كَلِمـاتِـه.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            Glory is to Allah and praise is to Him, equal to the number of His creation...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-15"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء العافية -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء العافية
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ عافِـني في بَدَنـي ، اللّهُـمَّ عافِـني في سَمْـعي ، اللّهُـمَّ عافِـني في بَصَـري ، لا إلهَ إلاّ أَنْـتَ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, grant me well-being in my body, hearing, and sight.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-16"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الاستعاذة -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الاستعاذة
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ إِنّـي أَعـوذُ بِكَ مِنَ الْكُـفر ، وَالفَـقْر ، وَأَعـوذُ بِكَ مِنْ عَذابِ القَـبْر ، لا إلهَ إلاّ أَنْـتَ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, I seek refuge in You from disbelief, poverty, and the punishment of the grave.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-17"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء العفو والعافية -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء العفو والعافية
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في الدُّنْـيا وَالآخِـرَة ، اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في ديني وَدُنْـيايَ وَأهْـلي وَمالـي ، اللّهُـمَّ اسْتُـرْ عـوْراتي وَآمِـنْ رَوْعاتـي ، اللّهُـمَّ احْفَظْـني مِن بَـينِ يَدَيَّ وَمِن خَلْفـي وَعَن يَمـيني وَعَن شِمـالي ، وَمِن فَوْقـي ، وَأَعـوذُ بِعَظَمَـتِكَ أَن أُغْـتالَ مِن تَحْتـي.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, I ask You for pardon and well-being in this life and the next...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-18"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء يا حي يا قيوم -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الاستغاثة
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        يَا حَيُّ يَا قيُّومُ بِرَحْمَتِكَ أسْتَغِيثُ أصْلِحْ لِي شَأنِي كُلَّهُ وَلاَ تَكِلْنِي إلَى نَفْسِي طَـرْفَةَ عَيْنٍ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Ever-Living, O Sustainer, by Your mercy I seek help...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-19"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء خير اليوم -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الصباح
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        أَصْبَـحْـنا وَأَصْبَـحْ المُـلكُ للهِ رَبِّ العـالَمـين ، اللّهُـمَّ إِنِّـي أسْـأَلُـكَ خَـيْرَ هـذا الـيَوْم ، فَـتْحَهُ ، وَنَصْـرَهُ ، وَنـورَهُ وَبَـرَكَتَـهُ ، وَهُـداهُ ، وَأَعـوذُ بِـكَ مِـنْ شَـرِّ ما فـيهِ وَشَـرِّ ما بَعْـدَه.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            We have entered the morning and the dominion belongs to Allah...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-20"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الفجر -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الحفظ
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللّهُـمَّ عالِـمَ الغَـيْبِ وَالشّـهادَةِ فاطِـرَ السّماواتِ وَالأرْضِ رَبَّ كـلِّ شَـيءٍ وَمَليـكَه ، أَشْهَـدُ أَنْ لا إِلـهَ إِلاّ أَنْت ، أَعـوذُ بِكَ مِن شَـرِّ نَفْسـي وَمِن شَـرِّ الشَّيْـطانِ وَشِرْكِهِ ، وَأَنْ أَقْتَـرِفَ عَلـى نَفْسـي سوءاً أَوْ أَجُـرَّهُ إِلـى مُسْـلِم.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-21"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الاستعاذة -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الاستعاذة
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        أَعـوذُ بِكَلِمـاتِ اللّهِ التّـامّـاتِ مِنْ شَـرِّ ما خَلَـق.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            I seek refuge in the perfect words of Allah from the evil of what He created.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-22"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : الصلاة على النبي -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            الصلاة على النبي
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 10x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, send blessings, peace, and barakah upon our Prophet Muhammad ﷺ.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-23"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,10)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الاستغفار من الشرك -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الاستغفار
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ أَنْ نُشْرِكَ بِكَ شَيْئًا نَعْلَمُهُ ، وَنَسْتَغْفِرُكَ لِمَا لَا نَعْلَمُهُ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, we seek refuge in You from associating anything with You knowingly...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-24"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الهم والحزن -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الهم والحزن
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنْ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنْ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ، وَقَهْرِ الرِّجَالِ
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, I seek refuge in You from worry and grief, weakness and laziness...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-25"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الاستغفار -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            الاستغفار
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 3x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        أسْتَغْفِرُ اللهَ العَظِيمَ الَّذِي لاَ إلَهَ إلاَّ هُوَ، الحَيُّ القَيُّومُ، وَأتُوبُ إلَيهِ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            I seek forgiveness from Allah the Great, besides whom there is no deity...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-26"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,3)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء الحمد -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء الحمد
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        يَا رَبِّ , لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ , وَلِعَظِيمِ سُلْطَانِكَ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Lord, to You is all praise as befits the majesty of Your Face and عظَيم Your dominion.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-27"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+           
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء التوكل -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء التوكل
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 1x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ ، عَلَيْكَ تَوَكَّلْتُ ، وَأَنْتَ رَبُّ الْعَرْشِ الْعَظِيمِ , مَا شَاءَ اللَّهُ كَانَ ، وَمَا لَمْ يَشَأْ لَمْ يَكُنْ ، وَلا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ , أَعْلَمُ أَنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ ، وَأَنَّ اللَّهَ قَدْ أَحَاطَ بِكُلِّ شَيْءٍ عِلْمًا , اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي ، وَمِنْ شَرِّ كُلِّ دَابَّةٍ أَنْتَ آخِذٌ بِنَاصِيَتِهَا ، إِنَّ رَبِّي عَلَى صِرَاطٍ مُسْتَقِيمٍ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            O Allah, You are my Lord; there is no deity except You...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-28"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,1)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : دعاء التوحيد -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            دعاء التوحيد
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 10x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِيرِ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            There is no god but Allah alone, He has no partner, His is the dominion and praise...
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-29"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+           
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,10)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : تسبيح -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            تسبيح
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 100x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        سُبْحـانَ اللهِ وَبِحَمْـدِهِ.
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            Glory is to Allah and praise is to Him.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-30"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,100)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CARD : الاستغفار -->
+<div class="sea-glass-card rounded-[32px] p-6 md:p-8">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-5">
+
+        <span class="title-font text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-900">
+            الاستغفار
+        </span>
+
+        <span class="text-xs text-amber-700 font-semibold bg-amber-100 px-3 py-1 rounded-md">
+            Recite 100x
+        </span>
+
+    </div>
+
+    <!-- Text (no breaks) -->
+    <p class="arabic-text text-xl md:text-2xl text-right text-slate-900 font-medium mb-6 leading-loose">
+
+        أسْتَغْفِرُ اللهَ وَأتُوبُ إلَيْهِ
+
+    </p>
+
+    <!-- Translation -->
+    <div class="border-t border-white/60 pt-4 mb-6" dir="ltr">
+
+        <p class="text-sky-950/70 text-sm italic">
+            I seek forgiveness from Allah and repent to Him.
+        </p>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+
+        <!-- Audio -->
+        <div class="flex items-center gap-2" dir="ltr">
+
+            <audio id="audio-31"
+                src="https://server11.mp3quran.net/yasser/002255.mp3"
+                preload="none"></audio>
+
+           
+        </div>
+
+        <!-- Counter -->
+        <button onclick="incrementTally(this,100)"
+            class="relative flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-md">
+
+            <svg class="absolute w-14 h-14">
+
+                <circle class="text-slate-100" stroke-width="3" stroke="currentColor"
+                    fill="transparent" r="24" cx="28" cy="28"/>
+
+                <circle class="text-emerald-500 progress-ring-circle"
+                    stroke-dasharray="150.8"
+                    stroke-dashoffset="150.8"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="24" cx="28" cy="28"/>
+
+            </svg>
+
+            <span class="count-display text-base font-bold text-slate-700">0</span>
+
+        </button>
+
+    </div>
+
+</div>
+    </main>
+
+    <!-- App Interactive Script Engine -->
+    <script>
+        // Circular Counter System
+        function incrementTally(button, targetLimit) {
+            const countLabel = button.querySelector('.count-display');
+            const progressCircle = button.querySelector('.progress-ring-circle');
+            
+            const radius = progressCircle.r.baseVal.value;
+            const circumference = radius * 2 * Math.PI;
+            
+            let currentCount = parseInt(countLabel.textContent);
+            
+            if (currentCount < targetLimit) {
+                currentCount++;
+                countLabel.textContent = currentCount;
+                
+                const offset = circumference - (currentCount / targetLimit) * circumference;
+                progressCircle.style.strokeDashoffset = offset;
+                
+                if (currentCount === targetLimit) {
+                    button.classList.add('bg-emerald-50', 'border-emerald-300');
+                    countLabel.classList.add('text-emerald-600');
+                }
+            } else {
+                // Reset on over-clicking
+                countLabel.textContent = '0';
+                progressCircle.style.strokeDashoffset = circumference;
+                button.classList.remove('bg-emerald-50', 'border-emerald-300');
+                countLabel.classList.remove('text-emerald-600');
+            }
+        }
+
+        // Global Audio Handler
+        let activeAudio = null;
+        let activePlayBtn = null;
+
+        function toggleAudio(id, button) {
+            const audio = document.getElementById(`audio-${id}`);
+            const playIcon = button.querySelector('.play-icon');
+            const pauseIcon = button.querySelector('.pause-icon');
+
+            if (activeAudio && activeAudio !== audio) {
+                activeAudio.pause();
+                activePlayBtn.querySelector('.play-icon').classList.remove('hidden');
+                activePlayBtn.querySelector('.pause-icon').classList.add('hidden');
+            }
+
+            if (audio.paused) {
+                audio.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+                activeAudio = audio;
+                activePlayBtn = button;
+
+                audio.onended = () => {
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                };
+            } else {
+                audio.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            }
+        }
+    </script>
+    <audio id="audio-5"
+    src="https://server11.mp3quran.net/yasser/114.mp3"
+    preload="none">
+</audio>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القرآن الكريم - الأجزاء</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Playpen+Sans+Arabic:wght@100..800&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --color-primary:#8B4513;
+            --color-secondary:#D2691E;
+            --color-accent:#F4A460;
+            --color-green:#228B22;
+            --color-blue:#4682B4;
+            --glass:rgba(255,255,255,0.25);
+            --shadow:rgba(139,69,19,0.3);
+        }
+
+        *{margin:0;padding:0;box-sizing:border-box;}
+
+        body{
+            font-family:'Tajawal',sans-serif;
+            min-height:100vh;
+            overflow-x:hidden;
+            background:#f6f1e8;
+        }
+
+        /* background */
+        .bg{
+            position:fixed;
+            inset:0;
+            background:linear-gradient(135deg,#f7f1e3,#e8dcc7);
+            z-index:-1;
+        }
+
+        header{
+            
+            position:fixed;
+            top:0;
+            width:100%;
+            padding:1.2rem 2rem;
+            background:var(--glass);
+            backdrop-filter:blur(20px);
+            border-bottom:2px solid var(--color-accent);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            z-index:1000;
+        }
+
+        .logo{
+            font-size:1.8rem;
+            font-weight:900;
+            color:var(--color-primary);
+        }
+
+        .container{
+            max-width:1300px;
+            margin:120px auto;
+            padding:0 2rem;
+        }
+
+        .title{
+            text-align:center;
+            font-size:2.5rem;
+            font-weight:900;
+            color:var(--color-primary);
+            margin-bottom:2rem;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+            gap:1.5rem;
+        }
+
+        .card{
+            background:var(--glass);
+            backdrop-filter:blur(25px);
+            border:2px solid rgba(244,164,96,0.3);
+            border-radius:25px;
+            padding:1.5rem;
+            cursor:pointer;
+            transition:.4s;
+            box-shadow:0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .card:hover{
+            transform:translateY(-10px) scale(1.03);
+            box-shadow:0 30px 70px var(--shadow);
+        }
+
+        .num{
+            font-family: Inter,sans-serif;
+            font-size:2.5rem;
+            font-weight:900;
+            background:linear-gradient(135deg,var(--color-primary),var(--color-secondary));
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            text-align:center;
+        }
+
+        .name{
+            text-align:center;
+            font-size:1.5rem;
+            margin:10px 0;
+            color:var(--color-primary);
+        }
+
+        .info{
+            text-align:center;
+            color:#5d4037;
+            font-size:.95rem;
+        }
+
+        .badge{
+            display:inline-block;
+            margin-top:10px;
+            padding:5px 15px;
+            border-radius:20px;
+            font-size:.8rem;
+            font-weight:700;
+            color:#fff;
+        }
+
+        .makk{
+            background:linear-gradient(135deg,var(--color-green),#32cd32);
+        }
+
+        .mad{
+            background:linear-gradient(135deg,var(--color-blue),#87ceeb);
+        }
+
+        /* modal */
+        .modal{
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,0.6);
+            display:none;
+            align-items:center;
+            justify-content:center;
+            z-index:2000;
+        }
+
+        .modal-content{
+            background:white;
+            padding:2rem;
+            border-radius:20px;
+            width:90%;
+            max-width:500px;
+        }
+
+        .close{
+            float:left;
+            cursor:pointer;
+            font-size:1.5rem;
+        }
+
+        /* ================= MOBILE ULTRA BEAUTIFUL DESIGN ================= */
+
+@media (max-width:768px){
+
+    body{
+        background:
+        radial-gradient(circle at top right,#f7d9b4 0%,transparent 30%),
+        radial-gradient(circle at bottom left,#e7c69d 0%,transparent 30%),
+        linear-gradient(180deg,#fdf7ef,#efe2cf);
+    }
+
+    header{
+        padding:14px 18px;
+        border-bottom:1px solid rgba(255,255,255,.4);
+        background:rgba(255,255,255,.18);
+        backdrop-filter:blur(25px);
+        box-shadow:0 10px 30px rgba(139,69,19,.08);
+    }
+
+    .logo{
+        font-size:1.2rem;
+        font-weight:800;
+        letter-spacing:.5px;
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+
+    .logo i{
+        width:42px;
+        height:42px;
+        border-radius:14px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(135deg,#8B4513,#D2691E);
+        color:#fff;
+        font-size:1rem;
+        box-shadow:0 10px 25px rgba(139,69,19,.3);
+    }
+
+    .container{
+        margin:95px auto 40px;
+        padding:0 14px;
+    }
+
+    .title{
+        font-size:1.8rem;
+        line-height:1.5;
+        margin-bottom:1.8rem;
+        color:#6d3f17;
+        font-weight:900;
+        text-shadow:0 3px 10px rgba(255,255,255,.7);
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .card{
+        position:relative;
+        overflow:hidden;
+        border:none;
+        padding:20px 18px;
+        border-radius:30px;
+        background:
+        linear-gradient(145deg,
+        rgba(255,255,255,.85),
+        rgba(255,255,255,.45));
+        backdrop-filter:blur(25px);
+        box-shadow:
+        0 15px 35px rgba(139,69,19,.12),
+        inset 0 1px 0 rgba(255,255,255,.7);
+        transition:.45s ease;
+    }
+
+    .card::before{
+        content:"";
+        position:absolute;
+        top:-60px;
+        left:-60px;
+        width:140px;
+        height:140px;
+        border-radius:50%;
+        background:rgba(244,164,96,.15);
+    }
+
+    .card::after{
+        content:"";
+        position:absolute;
+        bottom:-50px;
+        right:-50px;
+        width:120px;
+        height:120px;
+        border-radius:50%;
+        background:rgba(210,105,30,.12);
+    }
+
+    .card:active{
+        transform:scale(.97);
+    }
+
+    .num{
+        font-size:3rem;
+        font-weight:900;
+        margin-bottom:5px;
+        text-shadow:0 5px 15px rgba(139,69,19,.18);
+    }
+
+    .name{
+        font-size:1.35rem;
+        font-weight:800;
+        color:#6b3e1d;
+        margin-bottom:12px;
+        font-family:'Aref Ruqaa', serif;
+    }
+
+    .info{
+        font-size:.92rem;
+        line-height:1.9;
+        color:#6a5743;
+        font-weight:500;
+    }
+
+    .badge{
+        margin-top:16px;
+        padding:8px 18px;
+        border-radius:50px;
+        font-size:.8rem;
+        font-weight:800;
+        letter-spacing:.5px;
+        box-shadow:0 8px 20px rgba(0,0,0,.1);
+    }
+
+    .modal{
+        padding:20px;
+    }
+
+    .modal-content{
+        width:100%;
+        border-radius:30px;
+        padding:25px 20px;
+        background:
+        linear-gradient(145deg,#fff,#f8efe3);
+        box-shadow:0 25px 60px rgba(0,0,0,.25);
+        animation:popup .35s ease;
+    }
+
+    @keyframes popup{
+        from{
+            opacity:0;
+            transform:translateY(40px) scale(.9);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0) scale(1);
+        }
+    }
+
+    .close{
+        width:42px;
+        height:42px;
+        border-radius:14px;
+        background:#f4e2ce;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:1rem;
+        color:#8B4513;
+    }
+
+    #mTitle{
+        margin-top:20px;
+        font-size:1.5rem;
+        color:#6d3f17;
+        text-align:center;
+        font-family:'Aref Ruqaa', serif;
+    }
+
+    #mContent{
+        margin-top:18px;
+        line-height:2.2;
+        text-align:center;
+        color:#5d4037;
+        font-size:1rem;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+    <div class="logo"><i class="fas fa-book-open"></i> الأجزاء</div>
+</header>
+
+<div class="container">
+    <div class="title">الأجزاء الثلاثون من القرآن الكريم</div>
+
+    <div class="grid" id="grid"></div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">✖</span>
+        <h2 id="mTitle"></h2>
+        <div id="mContent"></div>
+    </div>
+</div>
+
+<script>
+const juzData = [
+{num:1, name:"الجزء الأول", surahs:"الفاتحة - البقرة (1-141)"},
+{num:2, name:"الجزء الثاني", surahs:"البقرة (142-252)"},
+{num:3, name:"الجزء الثالث", surahs:"البقرة (253-286) - آل عمران (1-92)"},
+{num:4, name:"الجزء الرابع", surahs:"آل عمران (93-200) - النساء (1-23)"},
+{num:5, name:"الجزء الخامس", surahs:"النساء (24-147)"},
+{num:6, name:"الجزء السادس", surahs:"النساء (148-176) - المائدة (1-81)"},
+{num:7, name:"الجزء السابع", surahs:"المائدة (82-120) - الأنعام (1-110)"},
+{num:8, name:"الجزء الثامن", surahs:"الأنعام (111-165) - الأعراف (1-87)"},
+{num:9, name:"الجزء التاسع", surahs:"الأعراف (88-206)"},
+{num:10, name:"الجزء العاشر", surahs:"الأنفال - التوبة (1-93)"},
+{num:11, name:"الجزء الحادي عشر", surahs:"التوبة (94-129) - يونس - هود"},
+{num:12, name:"الجزء الثاني عشر", surahs:"يوسف - الرعد - إبراهيم - الحجر"},
+{num:13, name:"الجزء الثالث عشر", surahs:"النحل - الإسراء"},
+{num:14, name:"الجزء الرابع عشر", surahs:"الكهف - مريم - طه"},
+{num:15, name:"الجزء الخامس عشر", surahs:"الأنبياء - الحج"},
+{num:16, name:"الجزء السادس عشر", surahs:"المؤمنون - النور - الفرقان"},
+{num:17, name:"الجزء السابع عشر", surahs:"الشعراء - النمل - القصص"},
+{num:18, name:"الجزء الثامن عشر", surahs:"العنكبوت - الروم - لقمان - السجدة"},
+{num:19, name:"الجزء التاسع عشر", surahs:"الأحزاب - سبأ - فاطر - يس"},
+{num:20, name:"الجزء العشرون", surahs:"الصافات - ص - الزمر"},
+{num:21, name:"الجزء الحادي والعشرون", surahs:"غافر - فصلت"},
+{num:22, name:"الجزء الثاني والعشرون", surahs:"الشورى - الزخرف - الدخان"},
+{num:23, name:"الجزء الثالث والعشرون", surahs:"الجاثية - الأحقاف - محمد"},
+{num:24, name:"الجزء الرابع والعشرون", surahs:"الفتح - الحجرات - ق"},
+{num:25, name:"الجزء الخامس والعشرون", surahs:"من الأحقاف إلى ق"},
+{num:26, name:"الجزء السادس والعشرون", surahs:"من الذاريات إلى الحديد"},
+{num:27, name:"الجزء السابع والعشرون", surahs:"من المجادلة  إلى التحريم"},
+{num:29, name:"الجزء التاسع والعشرون", surahs:"من الملك إلى المرسلات"},
+{num:30, name:"الجزء الثلاثون", surahs:"من النبأ إلى الناس"}
+];
+
+function render(){
+const grid=document.getElementById("grid");
+
+juzData.forEach(j=>{
+const div=document.createElement("div");
+div.className="card";
+div.innerHTML=`
+<div class="num">${j.num}</div>
+<div class="name">${j.name}</div>
+<div class="info">${j.surahs}</div>
+<div class="badge ${j.num%2===0?'mad':'makk'}">عرض</div>
+`;
+div.onclick=()=>openModal(j);
+grid.appendChild(div);
+});
+}
+
+function openModal(j){
+document.getElementById("modal").style.display="flex";
+document.getElementById("mTitle").innerText=j.name;
+document.getElementById("mContent").innerText=j.surahs;
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+render();
+</script>
+
+</body>
+</html>
+

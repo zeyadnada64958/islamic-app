@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحديث الشريف - كنوز النبوة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Playpen+Sans+Arabic:wght@100..800&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+
+        :root {
+          --primary-gold: #D4AF37;
+          --secondary-gold: #F1C40F;
+          --deep-blue: #0F172A;
+          --light-blue: #1E3A8A;
+          --pearl-white: #F8FAFC;
+          --emerald-green: #10B981;
+          --rose-gold: #E8B4B8;
+          --shadow-soft: rgba(212, 175, 55, 0.1);
+          --gradient-primary: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #D4AF37 100%);
+          --gradient-hover: linear-gradient(135deg, #D4AF37 0%, #F1C40F 50%, #1E3A8A 100%);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--gradient-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            font-size: 30px;
+        }
+
+        /* Floating Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+
+        .particle {
+            position: absolute;
+            background: var(--secondary-gold);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.1; }
+            90% { opacity: 0.1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            z-index: 10;
+            padding: 2rem 0;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient-hover);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: var(--pearl-white);
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            font-size: 22px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            outline: none;
+            transition: all 0.3s ease;
+            color: var(--deep-blue);
+            margin-right: 15px;
+        }
+
+        .search-input:focus {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+        }
+
+        .search-icon {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+        }
+
+        /* Hadith Cards */
+        .hadiths-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            z-index: 10;
+        }
+
+        .hadith-card {
+            background: rgba(248, 250, 252, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.15),
+                0 0 0 1px rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .hadith-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-hover);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .hadith-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 
+                0 40px 80px rgba(212, 175, 55, 0.3),
+                0 0 0 1px rgba(212, 175, 55, 0.5);
+        }
+
+        .hadith-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Hadith Number */
+        .hadith-number {
+            font-family: IBM Plex Sans Arabic,sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Hadith Text */
+        .hadith-text {
+            font-size: 23px;
+            line-height: 1.8;
+            color: #0F172A;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-right: 2rem;
+        }
+
+        .hadith-text::before {
+            content: 'ﷺ';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+        }
+
+        /* Source */
+        .source {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            color: seagreen;
+            font-weight: 600;
+        }
+
+        .source i {
+            color: var(--emerald-green);
+            font-size: 1.2rem;
+        }
+
+        /* Lessons Section */
+        .lessons {
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(212, 175, 55, 0.1));
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-left: 5px solid var(--emerald-green);
+        }
+
+        .lessons-title {
+            color: var(--emerald-green);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lesson-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            padding: 0.5rem;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .lesson-item:hover {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .lesson-icon {
+            color: var(--emerald-green);
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        /* Audio Player */
+        .audio-player {
+            font-size: 20px;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(30, 58, 138, 0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-hover);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+        }
+
+     /* =========================================
+   ULTRA BEAUTIFUL MOBILE DESIGN
+========================================= */
+
+@media screen and (max-width:768px){
+
+    body{
+        background:
+        radial-gradient(circle at top right,#1E3A8A 0%,#0F172A 45%,#000814 100%);
+        font-size:14px;
+    }
+
+    /* HEADER */
+
+    .header{
+        padding:25px 15px;
+        border-bottom-left-radius:35px;
+        border-bottom-right-radius:35px;
+        background:
+        linear-gradient(
+        135deg,
+        rgba(15,23,42,0.98),
+        rgba(30,58,138,0.92)
+        );
+        box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
+    }
+
+    .logo{
+        font-size:52px !important;
+        line-height:1.3;
+        letter-spacing:2px;
+        text-shadow:
+        0 0 20px rgba(212,175,55,0.3);
+    }
+
+    /* SEARCH */
+
+    .search-container{
+        padding:0 16px;
+        margin-top:22px;
+    }
+
+    .search-input-wrapper{
+        position:relative;
+    }
+
+    .search-input{
+        height:60px;
+        border-radius:22px;
+        padding-right:40px;
+        padding-left:18px;
+        background:
+        rgba(255,255,255,0.97);
+        border:
+        2px solid rgba(212,175,55,0.15);
+        margin-right: 0px;
+        box-shadow:
+        0 10px 35px rgba(0,0,0,0.22);
+
+        font-size:15px !important;
+        transition:0.3s;
+    }
+
+    .search-input:focus{
+        transform:translateY(-3px);
+        border-color:#D4AF37;
+        box-shadow:
+        0 15px 40px rgba(212,175,55,0.25);
+    }
+
+    .search-icon{
+        top:30px;
+        right:18px;
+        font-size:16px;
+        color:#D4AF37;
+    }
+
+    /* CONTAINER */
+
+    .hadiths-container{
+        display:flex;
+        flex-direction:column;
+        gap:22px;
+        padding:20px 16px 60px;
+        margin-top:10px;
+    }
+
+    /* HADITH CARD */
+
+    .hadith-card{
+        position:relative;
+        overflow:hidden;
+
+        padding:22px 18px;
+        border-radius:30px;
+
+        background:
+        linear-gradient(
+        145deg,
+        rgba(255,255,255,0.97),
+        rgba(248,250,252,0.94)
+        );
+
+        border:
+        1px solid rgba(212,175,55,0.18);
+
+        box-shadow:
+        0 20px 45px rgba(0,0,0,0.18);
+
+        backdrop-filter:blur(20px);
+
+        transition:0.4s ease;
+    }
+
+    /* GOLD GLOW */
+
+    .hadith-card::after{
+        content:'';
+        position:absolute;
+        top:-50px;
+        right:-50px;
+        width:140px;
+        height:140px;
+        background:
+        radial-gradient(
+        circle,
+        rgba(212,175,55,0.18),
+        transparent 70%
+        );
+        border-radius:50%;
+    }
+
+    .hadith-card:active{
+        transform:scale(0.98);
+    }
+
+    /* NUMBER */
+
+    .hadith-number{
+        font-size:32px;
+        margin-bottom:14px;
+
+        text-shadow:
+        0 0 15px rgba(212,175,55,0.15);
+    }
+
+    /* HADITH TEXT */
+
+    .hadith-text{
+        font-size:15px;
+        line-height:2.3;
+        color:#0F172A;
+        padding-right:22px;
+        margin-bottom:18px;
+        font-family:'Amiri',serif;
+    }
+
+    .hadith-text::before{
+        font-size:15px;
+        top:2px;
+        color:#D4AF37;
+    }
+
+    /* SOURCE */
+
+    .source{
+        font-size:12px;
+        padding:10px 14px;
+        border-radius:14px;
+
+        background:
+        rgba(16,185,129,0.08);
+
+        width:fit-content;
+
+        margin-bottom:18px;
+    }
+
+    /* LESSONS */
+
+    .lessons{
+        border-radius:22px;
+        padding:16px;
+        margin-top:10px;
+
+        background:
+        linear-gradient(
+        135deg,
+        rgba(16,185,129,0.08),
+        rgba(212,175,55,0.08)
+        );
+
+        border:none;
+
+        box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.3);
+    }
+
+    .lessons-title{
+        font-size:15px;
+        margin-bottom:12px;
+        color:#059669;
+    }
+
+    .lesson-item{
+        background:
+        rgba(255,255,255,0.55);
+
+        border-radius:14px;
+        padding:10px;
+        margin-bottom:10px;
+
+        transition:0.3s;
+    }
+
+    .lesson-item:active{
+        transform:scale(0.97);
+    }
+
+    .lesson-item span{
+        font-size:13px;
+        line-height:2;
+    }
+
+    .lesson-icon{
+        font-size:13px;
+        color:#10B981;
+    }
+
+    /* AUDIO PLAYER */
+
+    .audio-player{
+        margin-top:18px;
+
+        border-radius:20px;
+
+        padding:14px;
+
+        background:
+        linear-gradient(
+        135deg,
+        rgba(30,58,138,0.12),
+        rgba(212,175,55,0.10)
+        );
+
+        justify-content:space-between;
+    }
+
+    .audio-player span{
+        font-size:13px;
+        font-weight:600;
+        color:#0F172A;
+    }
+
+    .play-btn{
+        width:46px;
+        height:46px;
+
+        border-radius:18px;
+
+        background:
+        linear-gradient(
+        135deg,
+        #D4AF37,
+        #F1C40F
+        );
+
+        box-shadow:
+        0 10px 25px rgba(212,175,55,0.4);
+    }
+
+    .play-btn:active{
+        transform:scale(0.92);
+    }
+
+    /* BEAUTIFUL SCROLLBAR */
+
+    ::-webkit-scrollbar{
+        width:6px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background:#D4AF37;
+        border-radius:10px;
+    }
+
+    /* PARTICLES */
+
+    .particle{
+        opacity:0.18 !important;
+        filter:blur(1px);
+    }
+
+}
+
+
+/* EXTRA SMALL PHONES */
+
+@media screen and (max-width:480px){
+
+    .logo{
+        font-size:42px !important;
+    }
+
+    .hadith-card{
+        border-radius:26px;
+        padding:18px 15px;
+    }
+
+    .hadith-number{
+        font-size:28px;
+    }
+
+    .hadith-text{
+        font-size:14px;
+        line-height:2.2;
+    }
+
+    .lesson-item span{
+        font-size:12px;
+    }
+
+    .search-input{
+        height:56px;
+        border-radius:20px;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 style="font-family: Oi,sans-serif; font-size: 125px;" class="logo">كنوز النبوة</h1>
+    </header>
+
+    <!-- Search -->
+    <div class="search-container">
+        <div class="search-input-wrapper">
+            <input style="font-family: Amiri,sans-serif; font-size: 20px;" type="text" class="search-input" placeholder="ابحث في الأحاديث الشريفة..." id="searchInput">
+            <i style="width: 32px; height: 25px;" class="fas fa-magnifying-glass search-icon"></i>
+        </div>
+    </div>
+
+    <!-- Hadiths Container -->
+    <div class="hadiths-container" id="hadithsContainer">
+        <div class="loading">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sample Hadiths Data
+        const hadiths = [
+            {
+                number: "١",
+                text: "المسلم من سلم المسلمون من لسانه ويده",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "الإسلام يأمر بالابتعاد عن الأذى",
+                    "لسان المسلم ويده أمان للناس",
+                    "التقوى في حفظ اللسان واليد"
+                ],
+                audio: "audio1.mp3"
+            },
+            {
+                number: "٢",
+                text: "إنما الأعمال بالنيات",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "النية أساس قبول العمل",
+                    "الإخلاص شرط الأجر",
+                    "العمل بلا نية صالحة بلا قيمة"
+                ],
+                audio: "audio2.mp3"
+            },
+            {
+                number: "٣",
+                text: "الدين النصيحة",
+                source: "رواه مسلم",
+                lessons: [
+                    "النصيحة ركن أساسي من أركان الدين",
+                    "التحريض على الخير والصلاح",
+                    "مساعدة الآخرين على طريق الحق"
+                ],
+                audio: "audio3.mp3"
+            },
+            {
+                number: "٤",
+                text: "من كان يؤمن بالله واليوم الآخر فليقل خيراً أو ليصمت",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "الحديث عن الخير أو الصمت أفضل من الكلام السيء",
+                    "الإيمان بالله واليوم الآخر يفرض علينا حسن الكلام",
+                    "الكلام السيء يضر الإنسان والمجتمع"
+                ],
+                audio: "audio4.mp3"
+            },
+            {
+                number: "٥",
+                text: "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "المحبة للآخرين من علامات الإيمان",
+                    "التعامل مع الآخرين كما نحب أن يعاملونا",
+                    "الغيرة على الآخرين من الخير دليل على الإيمان"
+                ],
+                audio: "audio5.mp3"
+            },
+            {
+                number: "٦",
+                text: "أفضل الناس أنفعهم للناس",
+                source: "رواه الطبراني",
+                lessons: [
+                    "المنفعة للآخرين من أفضل الأعمال",
+                    "السعي في خدمة الناس دليل على الإيمان",
+                    "الخير لا يقتصر على العبادة بل يشمل خدمة الآخرين"
+                ],
+                audio: "audio6.mp3"
+            },
+            {
+                number: "٧",
+                text: "من حسن إسلام المرء تركه ما لا يعنيه",
+                source: "رواه الترمذي",
+                lessons: [
+                    "التركيز على الأمور المهمة في الحياة",
+                    "تجنب الانشغال بما لا يفيد",
+                    "الاهتمام بما يعود بالنفع في الدنيا والآخرة"
+                ],
+                audio: "audio7.mp3"
+            },
+            {
+                number: "٨",
+                text: "الحياء من الإيمان",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "الحياء خلق محمود في الإسلام",
+                    "الحياء يمنع الإنسان من فعل السيئات",
+                    "الحياء يزيد من حسنات الإنسان"
+                ],
+                audio: "audio8.mp3"
+            },
+            {
+                number: "٩",
+                text: "من صمت نجا",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "الصمت أحياناً أفضل من الكلام",
+                    "الكلام الكثير قد يؤدي إلى الخطأ",
+                    "السكوت عن الأمور التي لا تعني الإنسان حكمة"
+                ],
+                audio: "audio9.mp3"
+            },
+            {
+                number: "١٠",
+                text: "الرفق لا يكون في شيء إلا زانه ولا ينزع من شيء إلا شانه",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "الرفق خلق جميل يزين الإنسان",
+                    "الرفق في التعامل مع الآخرين يزيد من المحبة",
+                    "الرفق في الأمور الصعبة يجعلها أسهل"
+                ],
+                audio: "audio10.mp3"
+            },
+            {
+                number: "١١",
+                text: "من لا يشكر الناس لا يشكر الله",
+                source: "رواه الترمذي",
+                lessons: [
+                    "الشكر للناس جزء من الشكر لله",
+                    "التقدير والامتنان للآخرين من علامات الإيمان",
+                    "الشكر يعزز العلاقات الاجتماعية ويزيد من المحبة"
+                ],
+                audio: "audio11.mp3"
+            },
+            {
+                number: "١٢",
+                text: "من كان في حاجة أخيه كان الله في حاجته",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "مساعدة الآخرين من أفضل الأعمال",
+                    "الله يعين من يعين الآخرين",
+                    "الاهتمام بحاجات الآخرين دليل على الإيمان"
+                ],
+                audio: "audio12.mp3"
+            },
+            {
+                number: "١٣",
+                text: "لا يدخل الجنة من لا يأمن جاره بوائقه",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "الأمانة في التعامل مع الجيران من شروط دخول الجنة",
+                    "الجار له حقوق يجب احترامها",
+                    "التعامل الحسن مع الجيران يعكس حسن الخلق"
+                ],
+                audio: "audio13.mp3"
+            },
+            {
+                number: "١٤",
+                text:"لا تغضب ولا تحقرن من المعروف شيئاً ولو أن تلقى أخاك بوجه طلق",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "التحكم في الغضب من علامات الإيمان",
+                    "عدم التقليل من الأعمال الصالحة مهما كانت صغيرة",
+                    "التعامل مع الآخرين بوجه بشوش يعكس حسن الخلق"
+                ],
+                audio: "audio14.mp3"
+            },
+            {
+                number: "١٥",
+                text: "من كان يؤمن بالله واليوم الآخر فليكرم ضيفه",
+                source: "رواه البخاري ومسلم",
+                lessons: [
+                    "كرم الضيافة من علامات الإيمان",
+                    "الاهتمام بالضيف يعكس حسن الخلق",
+                    "الضيافة تزيد من المحبة والتواصل بين الناس"
+                ],
+                audio: "audio15.mp3"
+            },
+            {
+               number: "١٦",
+               text:"خيركم من تعلم القرآن وعلمه",
+                source: "صحيح البخاري",
+                lessons: [
+                    "تعلم القرآن من أفضل الأعمال",
+                    "تعليم الخير صدقة جارية",
+                    "رفعة الإنسان تكون بالقرآن"
+                ],
+                audio: "audio16.mp3"  
+            },
+              {
+               number: "١٧",
+               text:"يسروا ولا تعسروا",
+                source: "صحيح البخاري ومسلم",
+                lessons: [
+                    "الإسلام دين رحمة وتيسير",
+                    "التشدد ينفر الناس",
+                    "الدعوة تحتاج إلى لين وحكمة"
+                ],
+                audio: "audio17.mp3"  
+            },
+            {
+                number: "١٨",
+                text:"الطهور شطر الإيمان",
+                source:"رواه مسلم",
+                lessons: [
+                    "النظافة جزء من الإيمان",
+                    "الطهارة مهمة للصلاة والعبادة",
+                    "الإسلام يهتم بالمظهر والنقاء"
+                ],
+                audio: "audio18.mp3"  
+            },
+                {
+                number: "١٩",
+                text:"من لا يَرحم لا يُرحم",
+                source:"رواه البخاري ومسلم",
+                lessons: [
+                    "الرحمة من أعظم الأخلاق",
+                    "معاملة الناس بلطف سبب لرحمة الله",
+                    "القسوة تُفسد العلاقات"
+                ],
+                audio: "audio19.mp3"  
+            },
+              {
+                number: "٢٠",
+                text:"الكلمة الطيبة صدقة",
+                source:"رواه البخاري ومسلم",
+                lessons: [
+                    "الكلام الحسن عبادة",
+                    "الكلمة قد تُسعد إنسانًا",
+                    "المؤمن يختار ألفاظه بعناية"
+                ],
+                audio: "audio20.mp3"  
+            },
+        ];
+
+        // Create Particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = particle.style.height = (Math.random() * 4 + 2) + 'px';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Render Hadiths
+        function renderHadiths(hadithsToShow = hadiths) {
+            const container = document.getElementById('hadithsContainer');
+            container.innerHTML = '';
+
+            hadithsToShow.forEach(hadith => {
+                const card = document.createElement('div');
+                card.className = 'hadith-card';
+                card.innerHTML = `
+                    <div class="hadith-number">${hadith.number}</div>
+                    <div class="hadith-text">${hadith.text}</div>
+                    <div class="source">
+                        <i class="fas fa-book"></i>
+                        ${hadith.source}
+                    </div>
+                    <div class="lessons">
+                        <div class="lessons-title">
+                            <i class="fas fa-lightbulb"></i>
+                            الدروس المستفادة
+                        </div>
+                        ${hadith.lessons.map(lesson => `
+                            <div class="lesson-item">
+                                <i class="fas fa-circle-check lesson-icon"></i>
+                                <span>${lesson}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="audio-player">
+                        <button class="play-btn" onclick="playAudio(this)">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <span>استمع للحديث</span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Search Functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const filtered = hadiths.filter(hadith => 
+                hadith.text.toLowerCase().includes(query) ||
+                hadith.source.toLowerCase().includes(query)
+            );
+            renderHadiths(filtered);
+        });
+
+        // Audio Player
+        function playAudio(button) {
+            const icon = button.querySelector('i');
+            if (icon.classList.contains('fa-play')) {
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+                // Here you would play the audio
+            } else {
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+                // Here you would pause the audio
+            }
+        }
+
+        // Initialize
+        window.addEventListener('load', () => {
+            createParticles();
+            setTimeout(() => {
+                renderHadiths();
+            }, 1000);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

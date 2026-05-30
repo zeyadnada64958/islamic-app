@@ -1,0 +1,887 @@
+<!DOCTYPE html>   <html lang="ar" dir="rtl">   
+<head>   
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>مواعيد الصلاة</title>   
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Thamaniya&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Estedad:wght@100..900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Playpen+Sans+Arabic:wght@100..800&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <style>   
+        * {   
+            margin: 0;   
+            padding: 0;   
+            box-sizing: border-box;   
+        }   body {   
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);   
+        min-height: 100vh;   
+        overflow-x: hidden;   
+        position: relative;   
+    }   
+
+    /* الخلفية النجمية المتحركة */   
+    .stars {   
+        position: fixed;   
+        top: 0;   
+        left: 0;   
+        width: 100%;   
+        height: 100%;   
+        pointer-events: none;   
+        z-index: 1;   
+    }   
+
+    .star {   
+        position: absolute;   
+        background: white;   
+        border-radius: 50%;   
+        animation: twinkle 3s infinite;   
+    }   
+
+    @keyframes twinkle {   
+        0%, 100% { opacity: 0.3; transform: scale(1); }   
+        50% { opacity: 1; transform: scale(1.2); }   
+    }   
+
+    /* الهيدر */   
+    .header {   
+        background: rgba(255, 255, 255, 0.1);   
+        backdrop-filter: blur(20px);   
+        padding: 20px 0;   
+        text-align: center;   
+        position: relative;   
+        z-index: 10;   
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);   
+    }   
+
+    .header h1 {   
+        color: #fff;   
+        font-size: 2.5rem;   
+        font-weight: 700;   
+        margin-bottom: 25px;   
+    }   
+
+    .location {   
+        color: rgba(255, 255, 255, 0.8);   
+        font-size: 1.2rem;   
+        display: flex;   
+        align-items: center;   
+        justify-content: center;   
+        gap: 10px;   
+    }   
+
+    /* حاوية الصلاة */   
+    .prayer-container {   
+        max-width: 1200px;   
+        margin: 50px auto;   
+        padding: 0 20px;   
+        position: relative;   
+        z-index: 10;   
+    }   
+
+    /* بطاقة الصلاة */   
+    .prayer-card {   
+        margin-bottom: 30px;   
+        perspective: 1000px;   
+        opacity: 0;   
+        transform: translateY(50px);   
+        animation: slideInUp 1s ease forwards;   
+    }   
+
+    .prayer-card:nth-child(1) { animation-delay: 0.1s; }   
+    .prayer-card:nth-child(2) { animation-delay: 0.2s; }   
+    .prayer-card:nth-child(3) { animation-delay: 0.3s; }   
+    .prayer-card:nth-child(4) { animation-delay: 0.4s; }   
+    .prayer-card:nth-child(5) { animation-delay: 0.5s; }   
+
+    @keyframes slideInUp {   
+        to {   
+            opacity: 1;   
+            transform: translateY(0);   
+        }   
+    }   
+
+    .prayer-inner {   
+        position: relative;   
+        height: 250px;   
+        border-radius: 30px;   
+        overflow: hidden;   
+        cursor: pointer;   
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);   
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);   
+    }   
+
+    .prayer-inner:hover {   
+        transform: translateY(-20px) scale(1.02);   
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);   
+    }   
+
+    /* خلفيات السماء لكل صلاة */   
+    .fajr-sky {   
+        background: linear-gradient(135deg,    
+            #1e3c72 0%,    
+            #2a5298 25%,    
+            #667eea 50%,    
+            #764ba2 75%,    
+            #f093fb 100%);   
+        position: relative;   
+    }   
+
+    .fajr-sky::before {   
+        content: '';   
+        position: absolute;   
+        top: 0;   
+        left: 0;   
+        right: 0;   
+        bottom: 0;   
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g1" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="50%" stop-color="%23ffffff" stop-opacity="0.3"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23g1)"><animate attributeName="cy" values="20;10;20" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="80" r="1.5" fill="url(%23g1)"><animate attributeName="cy" values="80;70;80" dur="4s" repeatCount="indefinite"/></circle></svg>') repeat;   
+        animation: starsMove 20s linear infinite;   
+    }   
+
+    .sunrise-sky {   
+        background: linear-gradient(135deg,    
+            #ffecd2 0%,    
+            #fcb69f 25%,    
+            #ff8a80 50%,    
+            #ff6b6b 75%,    
+            #ee5a24 100%);   
+    }   
+
+    .dhuhr-sky {   
+        background: linear-gradient(135deg,    
+            #4facfe 0%,    
+            #00f2fe 50%,    
+            #43e97b 100%);   
+    }   
+
+    .asr-sky {   
+        background: linear-gradient(135deg,    
+            #fa709a 0%,    
+            #fee140 50%,    
+            #ffd43b 100%);   
+    }   
+
+    .maghrib-sky {   
+        background: linear-gradient(135deg,    
+            #667eea 0%,    
+            #764ba2 50%,    
+            #f093fb 100%);   
+    }   
+
+    .isha-sky {   
+        background: linear-gradient(135deg,    
+            #0f0f23 0%,    
+            #1a1a3e 50%,    
+            #2d1b69 100%);   
+    }   
+
+    @keyframes starsMove {   
+        0% { transform: translateY(0) rotate(0deg); }   
+        100% { transform: translateY(-100px) rotate(360deg); }   
+    }   
+
+    /* محتوى البطاقة */   
+    .prayer-content {   
+        position: absolute;   
+        bottom: 0;   
+        left: 0;   
+        right: 0;   
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));   
+        padding: 30px;   
+        color: white;   
+        transform: translateY(100%);   
+        transition: transform 0.6s ease;   
+    }   
+
+    .prayer-inner:hover .prayer-content {   
+        transform: translateY(0);   
+    }   
+
+    .prayer-name {  
+        font-family: Aref Ruqaa Ink,sans-serif; 
+        font-size: 65px;   
+        font-weight: 700;   
+        margin-bottom: 10px;   
+        display: flex;   
+        margin-top: 20px;
+        align-items: center;   
+        gap: 15px;   
+    }   
+
+    .prayer-icon {   
+        width: 50px;   
+        height: 50px;   
+        background: rgba(255, 255, 255, 0.2);   
+        border-radius: 50%;   
+        display: flex;   
+        align-items: center;   
+        justify-content: center;   
+        font-size: 1.5rem;   
+        backdrop-filter: blur(10px);   
+    }   
+
+    .prayer-time {   
+        font-family: Bodoni Moda,sans-serif;
+        font-weight: 700;
+        font-size: 2.9rem;   
+        margin-bottom: 5px;
+        color: #ccc;
+    }   
+
+    .prayer-status {   
+        font-size: 1.1rem;   
+        opacity: 0.9;   
+    }   
+
+    .current::after {    
+        position: absolute;   
+        top: -15px;   
+        right: 20px;   
+        background: #ff6b6b;   
+        color: white;   
+        padding: 8px 20px;   
+        border-radius: 25px;   
+        font-size: 0.9rem;   
+        font-weight: 600;   
+        animation: pulse 2s infinite;   
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);   
+    }   
+
+    @keyframes pulse {   
+        0%, 100% { transform: scale(1); }   
+        50% { transform: scale(1.05); }   
+    }   
+
+    /* القبة المتحركة */   
+    .dome {   
+        position: absolute;   
+        top: 20px;   
+        left: 50%;   
+        transform: translateX(-50%);   
+        width: 80px;   
+        height: 80px;   
+        background: rgba(255, 255, 255, 0.1);   
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;   
+        backdrop-filter: blur(20px);   
+        animation: domeFloat 6s ease-in-out infinite;   
+    }   
+
+    @keyframes domeFloat {   
+        0%, 100% { transform: translateX(-50%) translateY(0px); }   
+        50% { transform: translateX(-50%) translateY(-10px); }   
+    }   
+
+    /* الجزيئات */   
+    .particles {   
+        position: absolute;   
+        width: 100%;   
+        height: 100%;   
+        overflow: hidden;   
+    }   
+
+    .particle {   
+        position: absolute;   
+        background: rgba(255, 255, 255, 0.6);   
+        border-radius: 50%;   
+        pointer-events: none;   
+        animation: float 8s infinite linear;   
+    }   
+
+    @keyframes float {   
+        0% {   
+            transform: translateY(100vh) rotate(0deg);   
+            opacity: 1;   
+        }   
+        100% {   
+            transform: translateY(-100px) rotate(360deg);   
+            opacity: 0;   
+        }   
+    }   
+
+    /* التصميم المتجاوب */   
+    @media (max-width: 768px) {   
+        .header h1 { font-size: 2rem; }   
+        .prayer-inner { height: 200px; }   
+        .prayer-time { font-size: 2rem; }   
+        .prayer-content { padding: 20px; }   
+    }   
+/* =========================================
+   ULTRA BEAUTIFUL MOBILE DESIGN
+========================================= */
+
+@media screen and (max-width:768px){
+
+    /* BODY */
+
+    body{
+
+        background:
+        radial-gradient(circle at top,
+        #5d2ea8 0%,
+        #1b1b40 35%,
+        #070b18 100%);
+
+    }
+
+    body::before{
+
+        content:'';
+
+        position:fixed;
+
+        top:-300px;
+        left:50%;
+
+        transform:translateX(-50%);
+
+        width:700px;
+        height:700px;
+
+        background:
+        radial-gradient(circle,
+        rgba(255,255,255,0.12),
+        transparent 70%);
+
+        filter:blur(80px);
+
+        pointer-events:none;
+
+        z-index:0;
+    }
+
+    /* HEADER */
+
+    .header{
+
+        margin:12px;
+
+        border-radius:30px;
+
+        padding:25px 15px;
+
+        background:
+        linear-gradient(
+        135deg,
+        rgba(255,255,255,0.12),
+        rgba(255,255,255,0.03)
+        );
+
+        backdrop-filter:blur(30px);
+
+        border:
+        1px solid rgba(255,255,255,0.08);
+
+        box-shadow:
+        0 15px 40px rgba(0,0,0,0.28);
+
+    }
+
+    .header h1{
+
+        font-size:55px !important;
+
+        line-height:1.5;
+
+        text-shadow:
+        0 0 30px rgba(255,255,255,0.18);
+
+    }
+
+    /* LOCATION */
+
+    .location{
+
+        width:fit-content;
+
+        margin:auto;
+
+        padding:8px 16px;
+
+        border-radius:20px;
+
+        background:
+        rgba(255,255,255,0.08);
+
+        border:
+        1px solid rgba(255,255,255,0.05);
+
+        backdrop-filter:blur(20px);
+
+        font-size:22px;
+
+        margin-top:8px;
+    }
+
+    /* CONTAINER */
+
+    .prayer-container{
+
+        padding:10px;
+
+        margin-top:10px;
+    }
+
+    /* CARD */
+
+    .prayer-card{
+
+        margin-bottom:14px;
+    }
+
+    .prayer-inner{
+
+        height:135px !important;
+
+        border-radius:28px;
+
+        border:
+        1px solid rgba(255,255,255,0.08);
+
+        overflow:hidden;
+
+        box-shadow:
+        0 12px 35px rgba(0,0,0,0.30);
+
+        backdrop-filter:blur(20px);
+
+        position:relative;
+    }
+
+    /* SHINE EFFECT */
+
+    .prayer-inner::before{
+
+        content:'';
+
+        position:absolute;
+
+        top:0;
+        left:-120%;
+
+        width:70%;
+        height:100%;
+
+        background:
+        linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.16),
+        transparent
+        );
+
+        transform:skewX(-25deg);
+
+        animation:shine 5s infinite;
+
+        z-index:2;
+    }
+
+    @keyframes shine{
+
+        0%{
+            left:-120%;
+        }
+
+        100%{
+            left:140%;
+        }
+
+    }
+
+    /* CONTENT */
+
+    .prayer-content{
+
+        padding:16px !important;
+
+        background:
+        linear-gradient(
+        transparent,
+        rgba(0,0,0,0.80)
+        );
+
+        backdrop-filter:blur(14px);
+
+        z-index:5;
+    }
+
+    /* NAME */
+
+    .prayer-name{
+        font-family: Aref Ruqaa Ink,sans-serif;
+        font-size:40px !important;
+
+        gap:8px;
+
+        margin-bottom:4px;
+    }
+
+    /* ICON */
+
+    .prayer-icon{
+
+        width:34px;
+        height:34px;
+
+        border-radius:14px;
+
+        background:
+        rgba(255,255,255,0.14);
+
+        border:
+        1px solid rgba(255,255,255,0.06);
+
+        font-size:12px;
+
+        box-shadow:
+        0 5px 15px rgba(255,255,255,0.08);
+    }
+
+    /* TIME */
+
+    .prayer-time{
+        font-family: Bodoni Moda,sans-serif;
+        font-size:24px !important;
+
+        font-weight:800;
+
+        letter-spacing:1px;
+
+        text-shadow:
+        0 3px 14px rgba(0,0,0,0.35);
+
+        margin-bottom:4px;
+    }
+
+    /* STATUS */
+
+    .prayer-status{
+
+        width:fit-content;
+
+        padding:5px 10px;
+
+        border-radius:16px;
+
+        background:
+        rgba(255,255,255,0.10);
+
+        border:
+        1px solid rgba(255,255,255,0.04);
+
+        font-size:10px;
+
+        backdrop-filter:blur(12px);
+    }
+
+    /* CURRENT */
+
+    .current::after{
+
+        top:10px;
+
+        right:10px;
+
+        padding:6px 12px;
+
+        border-radius:18px;
+
+        font-size:9px;
+
+        box-shadow:
+        0 6px 18px rgba(255,107,107,0.45);
+    }
+
+    /* DOME */
+
+    .dome{
+
+        width:45px;
+        height:45px;
+
+        top:10px;
+
+        background:
+        rgba(255,255,255,0.10);
+
+        border:
+        1px solid rgba(255,255,255,0.06);
+
+        box-shadow:
+        0 8px 22px rgba(255,255,255,0.08);
+    }
+
+    /* PARTICLES */
+
+    .particles{
+
+        z-index:1;
+    }
+
+    .particle{
+
+        background:
+        rgba(255,255,255,0.9);
+
+        box-shadow:
+        0 0 10px rgba(255,255,255,0.7);
+
+        animation:
+        float 7s linear infinite;
+    }
+
+    /* TIME INDICATOR */
+
+    .time-indicator{
+
+        position:fixed;
+
+        bottom:15px;
+        left:50%;
+
+        transform:translateX(-50%);
+
+        background:
+        rgba(255,255,255,0.10);
+
+        border:
+        1px solid rgba(255,255,255,0.08);
+
+        backdrop-filter:blur(20px);
+
+        padding:10px 18px;
+
+        border-radius:22px;
+
+        color:white;
+
+        font-size:12px;
+
+        z-index:100;
+
+        box-shadow:
+        0 10px 30px rgba(0,0,0,0.28);
+    }
+
+}
+
+
+</style>
+
+</head>   
+<body>   
+    <!-- النجوم الخلفية -->   
+    <div class="stars" id="stars"></div>
+    <!-- الهيدر -->   
+    <header class="header">   
+    <h1 style="font-family: Aref Ruqaa Ink; font-size: 100px;">مَوَاقِيتُ الصَّلَاةِ</h1>   
+    <div class="location">   
+        <i class="fas fa-map-marker-alt"></i>   
+        <span style="font-family: Bodoni Moda,sans-serif;color: #ccc; font-size: 25px;">Cairo,Egypt</span> 
+  
+    </div>   
+</header>   
+
+<!-- حاوية الصلوات -->   
+<div class="prayer-container">   
+    <div class="prayer-card">   
+        <div class="prayer-inner fajr-sky current">   
+            <div class="dome"></div>   
+            <div class="particles" id="particles1"></div>   
+            <div class="prayer-content">   
+                <div class="prayer-name">   
+                    <div class="prayer-icon">   
+                        <i class="fas fa-cloud"></i>  
+                    </div>
+                    الفَجْر 
+                </div>   
+                <div class="prayer-time" data-time="05:30">AM 4:17</div>   
+            </div>   
+        </div>   
+    </div>   
+
+    <div class="prayer-card">   
+        <div class="prayer-inner sunrise-sky">   
+            <div class="dome"></div>   
+            <div class="particles" id="particles2"></div>   
+            <div class="prayer-content">   
+                <div class="prayer-name">   
+                    <div class="prayer-icon">   
+                        <i class="fas fa-sun"></i>   
+                    </div>  
+                    الشُّرُوق
+                </div>   
+                <div class="prayer-time" data-time="06:45">AM 5:40</div>  
+            </div>   
+        </div>   
+    </div>   
+
+    <div class="prayer-card">   
+        <div class="prayer-inner dhuhr-sky">   
+            <div class="dome"></div>   
+            <div class="particles" id="particles3"></div>   
+            <div class="prayer-content">   
+                <div class="prayer-name">   
+                    <div class="prayer-icon">   
+                        <i class="fas fa-cloud-sun"></i>   
+                    </div>   
+                    الظُّهْر
+                </div>   
+                <div class="prayer-time" data-time="12:15">PM 1:15</div> 
+            </div>   
+        </div>   
+    </div>   
+
+    <div class="prayer-card">   
+        <div class="prayer-inner asr-sky">   
+            <div class="dome"></div>   
+            <div class="particles" id="particles4"></div>   
+            <div class="prayer-content">   
+                <div class="prayer-name">   
+                    <div class="prayer-icon">   
+                        <i class="fas fa-cloud"></i>   
+                    </div>  
+                    العَصْر
+                </div>   
+                <div class="prayer-time" data-time="03:30">PM 4:35</div>   
+            </div>   
+        </div>   
+    </div>   
+
+    <div class="prayer-card">   
+        <div class="prayer-inner maghrib-sky">   
+            <div class="dome"></div>   
+            <div class="particles" id="particles5"></div>   
+            <div class="prayer-content">   
+                <div class="prayer-name">   
+                    <div class="prayer-icon">   
+                        <i class="fas fa-cloud-sun"></i>   
+                    </div>  
+                    المَغْرِب 
+                </div>   
+                <div class="prayer-time" data-time="06:00">PM 7:47</div>   
+            </div>   
+        </div>   
+    </div>   
+
+    <div class="prayer-card">   
+        <div class="prayer-inner isha-sky">   
+            <div class="dome"></div>   
+            <div class="particles" id="particles6"></div>   
+            <div class="prayer-content">   
+                <div class="prayer-name">   
+                    <div class="prayer-icon">   
+                        <i class="fas fa-moon"></i>   
+                    </div>   
+                    العِشَاء
+                </div>   
+                <div style="font-family: Bodoni Moda,sans-serif;"" class="prayer-time" data-time="07:30">PM 9:27</div>
+            </div>   
+        </div>   
+    </div>   
+</div>   
+
+<script>   
+    // إنشاء النجوم المتحركة   
+    function createStars() {   
+        const starsContainer = document.getElementById('stars');   
+        for (let i = 0; i < 100; i++) {   
+            const star = document.createElement('div');   
+            star.className = 'star';   
+            star.style.left = Math.random() * 100 + '%';   
+            star.style.top = Math.random() * 100 + '%';   
+            star.style.width = star.style.height = (Math.random() * 3 + 1) + 'px';   
+            star.style.animationDelay = Math.random() * 3 + 's';   
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';   
+            starsContainer.appendChild(star);   
+        }   
+    }   
+
+    // إنشاء الجزيئات   
+    function createParticles(containerId) {   
+        const container = document.getElementById(containerId);   
+        for (let i = 0; i < 15; i++) {   
+            const particle = document.createElement('div');   
+            particle.className = 'particle';   
+            particle.style.left = Math.random() * 100 + '%';   
+            particle.style.width = particle.style.height = (Math.random() * 4 + 2) + 'px';   
+            particle.style.animationDelay = Math.random() * 8 + 's';   
+            particle.style.animationDuration = (Math.random() * 8 + 6) + 's';   
+            container.appendChild(particle);   
+        }   
+    }   
+
+   
+
+    // تشغيل الكود عند تحميل الصفحة   
+    document.addEventListener('DOMContentLoaded', function() {   
+        createStars();   
+           
+        // إنشاء الجزيئات لكل بطاقة   
+        ['particles1', 'particles2', 'particles3', 'particles4', 'particles5', 'particles6'].forEach(createParticles);   
+           
+        // تحديث الوقت كل ثانية   
+        setInterval(updateCurrentTime, 1000);   
+        updateCurrentTime();   
+           
+        // تأثير parallax عند التمرير   
+        window.addEventListener('scroll', () => {   
+            const scrolled = window.pageYOffset;   
+            const stars = document.querySelector('.stars');   
+            stars.style.transform = `translateY(${scrolled * 0.5}px)`;   
+        });   
+    });   
+
+    // تأثير النقر على البطاقات   
+    document.querySelectorAll('.prayer-inner').forEach(card => {   
+        card.addEventListener('click', function() {   
+            this.style.transform = 'scale(0.95) rotateX(10deg)';   
+            setTimeout(() => {   
+                this.style.transform = 'translateY(-20px) scale(1.02)';   
+            }, 150);   
+               
+            // إشعار صغير   
+            const notification = document.createElement('div');   
+            notification.style.cssText = `   
+                position: fixed;   
+                top: 20px;   
+                left: 50%;   
+                transform: translateX(-50%);   
+                background: linear-gradient(45deg, #ff6b6b, #ffd93d);   
+                color: white;   
+                padding: 15px 30px;   
+                border-radius: 25px;   
+                font-weight: 600;   
+                z-index: 1000;   
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);   
+                animation: slideDown 0.5s ease;   
+            `;   
+            notification.textContent = 'تم حفظ وقت الصلاة!';   
+            document.body.appendChild(notification);   
+               
+            setTimeout(() => {   
+                notification.remove();   
+            }, 3000);   
+        });   
+    });   
+
+    // إضافة CSS للإشعار   
+    const style = document.createElement('style');   
+    style.textContent = `   
+        @keyframes slideDown {   
+            0% { transform: translateX(-50%) translateY(-100%); opacity: 0; }   
+            100% { transform: translateX(-50%) translateY(0); opacity: 1; }   
+        }   
+    `;   
+    document.head.appendChild(style);   
+</script>
+
+</body>   
+</html>

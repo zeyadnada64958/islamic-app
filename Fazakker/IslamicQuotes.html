@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islamic Quotes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Playpen+Sans+Arabic:wght@100..800&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Playpen+Sans+Arabic:wght@100..800&family=Special+Elite&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ================= RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Cairo', sans-serif;
+height:100vh;
+overflow:hidden;
+background:
+radial-gradient(circle at 10% 20%, #ffcc80 0%, transparent 40%),
+radial-gradient(circle at 80% 10%, #80deea 0%, transparent 45%),
+radial-gradient(circle at 30% 80%, #a5d6a7 0%, transparent 50%),
+radial-gradient(circle at 90% 70%, #ce93d8 0%, transparent 45%),
+linear-gradient(135deg,#fff8e1,#e3f2fd,#f1f8e9);
+}
+
+/* ================= PAINT BLOBS ================= */
+.blob{
+position:absolute;
+border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;
+filter:blur(45px);
+opacity:.75;
+animation:float 8s infinite ease-in-out;
+z-index:0;
+}
+
+.blob1{width:300px;height:300px;background:#ff8a65;top:-90px;left:-120px;}
+.blob2{width:340px;height:340px;background:#4fc3f7;bottom:-140px;right:-120px;animation-delay:2s;}
+.blob3{width:240px;height:240px;background:#81c784;top:40%;left:60%;animation-delay:4s;}
+
+@keyframes float{
+0%,100%{transform:translate(0,0) rotate(0deg);}
+50%{transform:translate(30px,-30px) rotate(12deg);}
+}
+
+/* ================= BRUSH STROKES ================= */
+.stroke{
+position:absolute;
+width:360px;
+height:110px;
+background:rgba(255,255,255,0.35);
+border-radius:70px;
+filter:blur(2px);
+z-index:0;
+}
+
+.stroke1{top:50px;right:40px;transform:rotate(-12deg);}
+.stroke2{bottom:60px;left:40px;transform:rotate(18deg);}
+
+/* ================= DOODLES ================= */
+.doodle{
+position:absolute;
+font-size:55px;
+opacity:.25;
+animation:wiggle 6s infinite ease-in-out;
+z-index:0;
+}
+
+@keyframes wiggle{
+0%,100%{transform:rotate(0deg);}
+50%{transform:rotate(10deg);}
+}
+
+/* ================= FLOAT DOTS ================= */
+.dot{
+position:absolute;
+width:10px;
+height:10px;
+border-radius:50%;
+background:white;
+opacity:.6;
+animation:fall 7s infinite linear;
+z-index:0;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100px);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(100vh);opacity:0;}
+}
+
+/* ================= CENTER ================= */
+.container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
+z-index:2;
+}
+
+/* ================= MAIN CARD ================= */
+.card{
+width:100%;
+max-width:720px;
+background:#fffef7;
+border-radius:45px;
+padding:30px 25px;
+text-align:center;
+position:relative;
+box-shadow:
+0 30px 70px rgba(0,0,0,0.18),
+inset 0 0 0 6px #ffe0b2,
+inset 0 0 0 12px #bbdefb;
+overflow:hidden;
+}
+
+/* dashed cartoon border */
+.card::before{
+content:"";
+position:absolute;
+inset:-6px;
+border-radius:50px;
+border:4px dashed #ffb74d;
+opacity:.6;
+}
+
+/* ================= HEADER PAPER ================= */
+.top-banner{
+margin-bottom:18px;
+position:relative;
+}
+
+.paper-title{
+background:
+linear-gradient(135deg,#fff8e1,#ffffff,#e3f2fd);
+padding:20px 30px;
+border-radius:28px;
+border:3px dashed #ffb74d;
+box-shadow:
+0 12px 25px rgba(0,0,0,0.12),
+inset 0 0 15px rgba(0,0,0,0.05);
+transform:rotate(-1deg);
+position:relative;
+}
+
+.paper-title h1{
+font-size:34px;
+color:#ef6c00;
+letter-spacing:2px;
+text-shadow:2px 2px 0 #fff3e0;
+}
+
+.paper-title p{
+font-size:13px;
+color:#666;
+margin-top:5px;
+}
+
+.sticker{
+position:absolute;
+top:-12px;
+right:-12px;
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#fff;
+border:2px solid #ffe0b2;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+animation:floatSticker 3s infinite ease-in-out;
+}
+
+@keyframes floatSticker{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+}
+
+/* ================= QUOTE ================= */
+.quote-box{
+background:
+linear-gradient(135deg,#fff,#fff8e1,#e3f2fd);
+border-radius:35px;
+padding:35px 25px;
+border:3px dotted #ffb74d;
+position:relative;
+box-shadow:inset 0 0 25px rgba(0,0,0,0.05);
+}
+
+.quote-box::before,
+.quote-box::after{
+content:"";
+position:absolute;
+width:75px;
+height:75px;
+border-radius:50%;
+filter:blur(14px);
+opacity:.35;
+}
+
+.quote-box::before{background:#ff7043;top:-25px;right:-25px;}
+.quote-box::after{background:#42a5f5;bottom:-25px;left:-25px;}
+
+.quote{
+    font-family: Tajawal, sans-serif;
+    font-size:30px;
+    line-height:2;
+    color: #ff8a65;
+    font-weight:400;
+}
+
+.author{
+margin-top:15px;
+color:#2e7d32;
+font-weight:900;
+}
+
+/* ================= BUTTONS ================= */
+.buttons{
+margin-top:28px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:flex;
+align-items:center;
+gap:8px;
+padding:14px 20px;
+border:none;
+border-radius:80px;
+cursor:pointer;
+font-weight:900;
+font-size:14px;
+color:#fff;
+
+position:relative;
+overflow:hidden;
+
+box-shadow:
+0 10px 0 rgba(0,0,0,0.18),
+0 18px 30px rgba(0,0,0,0.15);
+
+transition:0.25s ease;
+}
+
+/* press effect */
+.btn:active{
+transform:translateY(6px);
+box-shadow:0 3px 0 rgba(0,0,0,0.2);
+}
+
+/* shine */
+.btn::before{
+content:"";
+position:absolute;
+inset:-60%;
+background:radial-gradient(circle,rgba(255,255,255,0.45),transparent 60%);
+opacity:0;
+transition:0.4s;
+}
+
+.btn:hover::before{
+opacity:1;
+}
+
+.icon{
+font-size:18px;
+}
+
+/* colors */
+.btn1{background:linear-gradient(135deg,#ffb74d,#ff7043);}
+.btn2{background:linear-gradient(135deg,#64b5f6,#1e88e5);}
+.btn3{background:linear-gradient(135deg,#81c784,#2e7d32);}
+
+/* hover */
+.btn:hover{
+transform:translateY(-5px) rotate(-1deg) scale(1.03);
+}
+
+.btn:hover .icon{
+animation:bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce{
+0%{transform:translateY(0);}
+100%{transform:translateY(-4px);}
+}
+
+@media (max-width: 768px){
+
+/* scale the whole card like a mini version */
+.container{
+    transform: scale(0.92);
+    transform-origin: center;
+}
+
+/* reduce spacing so it still fits */
+.card{
+    padding: 22px 18px;
+}
+
+/* slightly smaller text but same design */
+.paper-title h1{
+    font-size: 42px !important;
+}
+
+.quote{
+    font-size: 26px !important;
+    line-height: 1.9;
+}
+
+.author{
+    font-size: 14px;
+}
+
+/* buttons stay same style but smaller */
+.btn{
+    padding: 12px 16px;
+    font-size: 13px;
+}
+}
+
+@media (max-width: 480px){
+
+/* stronger scale for small phones */
+.container{
+    transform: scale(0.82);
+    transform-origin: center;
+}
+
+/* keep same look but compact */
+.card{
+    padding: 20px 15px;
+}
+
+.paper-title h1{
+    font-size: 34px !important;
+}
+
+.quote{
+    font-size: 22px !important;
+}
+
+.buttons{
+    gap: 10px;
+}
+}
+
+@media (max-width: 360px){
+
+.container{
+    transform: scale(0.75);
+}
+
+.paper-title h1{
+    font-size: 28px !important;
+}
+
+.quote{
+    font-size: 20px !important;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!--  background elements -->
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<div class="stroke stroke1"></div>
+<div class="stroke stroke2"></div>
+
+<div class="doodle" style="top:20px;left:20px;">
+    <svg  xmlns="http://www.w3.org/2000/svg" width="36" height="36"  
+fill="currentColor" viewBox="2 2 20 20" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c2.45 0 4.81-.9 6.65-2.54.35-.31.44-.82.21-1.23s-.71-.6-1.16-.47c-.56.16-1.13.25-1.7.25-3.31 0-6-2.69-6-6s2.69-6 6-6c.57 0 1.14.08 1.7.25.45.13.93-.06 1.16-.47s.14-.92-.21-1.23A9.98 9.98 0 0 0 12 2.02ZM8 12c0 3.72 2.55 6.85 5.99 7.75-.65.17-1.32.25-1.99.25-4.41 0-8-3.59-8-8s3.59-8 8-8c.68 0 1.35.09 1.99.25A8.02 8.02 0 0 0 8 12"></path><path d="M18.62 10.76 17.5 8.5l-1.12 2.26-2.38.21 1.85 1.85-.82 2.68 2.47-1.65 2.47 1.65-.82-2.68L21 10.97z"></path>
+</svg>
+</div>
+<div class="doodle" style="top:120px;right:40px;">☪</div>
+<div class="doodle" style="bottom:60px;left:80px;">
+    <svg  xmlns="http://www.w3.org/2000/svg" width="36" height="36"  
+fill="currentColor" viewBox="2 2 20 20" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M19 2c-1.65 0-3 1.35-3 3v3.59c0-1.67-.84-3.26-2.32-4.28l-3.12-2.14c-.34-.23-.79-.23-1.13 0L6.31 4.31c-1.6 1.1-2.43 2.88-2.29 4.68H2.99c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V5c0-1.65-1.35-3-3-3Zm-3 7h-.03c0-.1.03-.21.03-.31zM7.45 5.96 10 4.21l2.55 1.75c1.04.72 1.56 1.88 1.42 3.04H6.03c-.14-1.16.38-2.32 1.42-3.04M16 11v1H4v-1zm-3.5 4S11 16 11 18v2H9v-2c0-2-1.5-3-1.5-3S6 16 6 18v2H4v-6h12v6h-2v-2c0-2-1.5-3-1.5-3m7.5 5h-2V8h2zM18 6V5c0-.55.45-1 1-1s1 .45 1 1v1z"></path>
+</svg>
+</div>
+
+<div class="dot" style="left:10%;animation-delay:0s;"></div>
+<div class="dot" style="left:25%;animation-delay:2s;"></div>
+<div class="dot" style="left:40%;animation-delay:1s;"></div>
+<div class="dot" style="left:65%;animation-delay:3s;"></div>
+<div class="dot" style="left:80%;animation-delay:1.5s;"></div>
+
+<!-- MAIN -->
+<div class="container">
+
+<div class="card">
+
+<!-- HEADER -->
+<div class="top-banner">
+<div class="paper-title">
+<h1 style="font-family: BBH Hegarty; font-size: 55px;">ISLAMIC QUOTES</h1>
+<div class="sticker">🌙</div>
+</div>
+</div>
+
+<!-- QUOTE -->
+<div style="font-family: Tajawal; font-size: 17px;" class="quote-box">
+<div class="quote" id="quote">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+<div class="author" id="author">سورة الشرح - 6</div>
+</div>
+
+<!-- BUTTONS -->
+<div class="buttons">
+
+<button class="btn btn1" onclick="newQuote()">
+    <svg  xmlns="http://www.w3.org/2000/svg" width="36" height="36"  
+fill="currentColor" viewBox="2 2 20 20" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M19 9.09V6c0-.55-.45-1-1-1h-3.09L12.7 2.79a.996.996 0 0 0-1.41 0L9.08 5H5.99c-.55 0-1 .45-1 1v3.09L2.78 11.3a.996.996 0 0 0 0 1.41l2.21 2.21v3.09c0 .55.45 1 1 1h3.09l2.21 2.21c.2.2.45.29.71.29s.51-.1.71-.29l2.21-2.21h3.09c.55 0 1-.45 1-1v-3.09l2.21-2.21a.996.996 0 0 0 0-1.41l-2.21-2.21Zm-1.71 4.71a1 1 0 0 0-.29.71v2.5h-2.5c-.27 0-.52.11-.71.29L12 19.09l-1.79-1.79a1 1 0 0 0-.71-.29H7v-2.5c0-.27-.11-.52-.29-.71l-1.79-1.79 1.79-1.79A1 1 0 0 0 7 9.51v-2.5h2.5c.27 0 .52-.11.71-.29L12 4.93l1.79 1.79c.19.19.44.29.71.29H17v2.5c0 .27.11.52.29.71l1.79 1.79z"></path><path d="m11 12.59-1.29-1.3-1.42 1.42 2.71 2.7 4.71-4.7-1.42-1.42z"></path>
+</svg>
+</button>
+
+<button class="btn btn2" onclick="copyQuote()">
+    <svg  xmlns="http://www.w3.org/2000/svg" width="36" height="36"  
+fill="currentColor" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M19 3h-2c0-.55-.45-1-1-1H8c-.55 0-1 .45-1 1H5c-1.1 0-2 .9-2 2v15c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 17H5V5h2v2h10V5h2z"></path><path d="M11 14.09 8.71 11.8 7.3 13.21l3 3c.2.2.45.29.71.29s.51-.1.71-.29l5-5-1.41-1.41-4.29 4.29Z"></path>
+</svg>
+</button>
+
+<button class="btn btn3" onclick="shareQuote()">
+    <svg  xmlns="http://www.w3.org/2000/svg" width="36" height="36"  
+fill="currentColor" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="M5.5 15.5c1.07 0 2.02-.5 2.67-1.26l6.87 3.87c-.01.13-.04.26-.04.39 0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5c-1.07 0-2.02.5-2.67 1.26l-6.87-3.87c.01-.13.04-.26.04-.39s-.02-.26-.04-.39l6.87-3.87C16.47 8.5 17.42 9 18.5 9 20.43 9 22 7.43 22 5.5S20.43 2 18.5 2 15 3.57 15 5.5c0 .13.02.26.04.39L8.17 9.76A3.48 3.48 0 0 0 5.5 8.5C3.57 8.5 2 10.07 2 12s1.57 3.5 3.5 3.5m13 1.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5m0-13c.83 0 1.5.67 1.5 1.5S19.33 7 18.5 7 17 6.33 17 5.5 17.67 4 18.5 4m-13 6.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S4 12.83 4 12s.67-1.5 1.5-1.5"></path>
+</svg>
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const quotes = [
+    {q:"حاسِبوا أنفسكم قبل أن تُحاسَبوا، وزِنوا أعمالكم قبل أن تُوزَن عليكم", a:"عمر بن الخطاب رضي الله عنه"},
+    {q:"إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى", a:"حديث نبوي شريف"},
+    {q:"وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا", a:"سورة الطلاق - 2"},
+    {q:"لو كان الفقر رجلاً لقتلته", a:"عمر بن الخطاب رضي الله عنه"},
+    {q:"الدنيا سجن المؤمن وجنة الكافر", a:"حديث نبوي شريف"},
+    {q:"متى استعبدتم الناس وقد ولدتهم أمهاتهم أحراراً؟", a:"عمر بن الخطاب رضي الله عنه"},
+    {q:"إذا لم تشغل نفسك بالحق شغلتك بالباطل", a:"الامام الشافعي"},
+    {q:"الصبر مفتاح الفرج", a:"الإمام أحمد بن حنبل"},
+    {q:"على قدر أهل العزم تأتي العزائم", a:"المتنبي"},
+    {q:"من جد وجد ومن زرع حصد", a:"حديث نبوي شريف"},
+    {q:"العقل زينة الإنسان", a:"الجاحظ"},
+    {q:"الحياة الدنيا ملك لله", a:"الإمام الشافعي"},
+    {q:"لا تقهر من استضعفته الأيام، فالدنيا دولة", a:"الإمام علي بن أبي طالب رضي الله عنه"},
+    {q:"قيمة كل امرئ ما يحسنه", a:"الامام علي بن أبي طالب رضي الله عنه"},
+    {q:"يا ابن آدم، إنما أنت أيام، كلما ذهب يوم ذهب بعضك", a:"الحسن البصري"},
+    {q:"لو كانت الدنيا تساوي عند الله جناح بعوضة ما سقي كافرا منها شربة", a:"الإمام علي بن أبي طالب رضي الله عنه"},
+    {q:"اعمل لدنياك كأنك تعيش أبدا واعمل لاخرتك كأنك تموت غدا", a:"الإمام علي بن أبي طالب رضي الله عنه"},
+    {q:"ما ندمتُ على سكوتي مرة، لكنني ندمتُ على الكلام مرارًا",a:"عمر بن الخطاب"},
+    {q:"إذا أردت أن تعرف مقامك عند الله فانظر فيما أقامك",a:"الحسن البصري"},
+    {q:"إنما الدنيا حلم، والآخرة يقظة، والموت متوسط، ونحن في أضغاث أحلام",a:"علي بن أبي طالب"},
+    {q:"من أصلح سريرته أصلح الله علانيته",a:"ابن القيم الجوزية"},
+    {q:"القلب إذا امتلأ من محبة الله لم يكن فيه فراغ لغيره",a:"ابن تيمية"},
+    {q:"إن الله إذا أحب عبدًا جعل له نورًا في قلبه",a:"عبد الله بن مسعود"},
+    {q:"العلم يهتف بالعمل، فإن أجابه وإلا ارتحل",a:"الإمام الشافعي"},
+    {q:"كلما أدّبني الدهر أراني نقص عقلي",a:"الإمام الشافعي"},
+    {q:"من عرف الله هانت عليه مصائب الدنيا",a:"الإمام الغزالي"},
+    {q:"ليس العيد لمن لبس الجديد، إنما العيد لمن طاعته تزيد",a:"الحسن البصري"},
+    {q:"أشدّ الأعمال ثلاثة: ذكر الله على كل حال، والإنصاف من نفسك، ومواساة الأخ في المال",a:"جعفر الصادق"},
+    {q:"إذا أراد الله بعبدٍ خيرًا فتح له باب الدعاء",a:"ابن القيم الجوزية"},
+    {q:"احة القلب في قلة الاهتمام بما فات، وكثرة اليقين بما هو آت",a:"ابن عطاء الله السكندري"},
+    {q:"لا يكن تأخر أمد العطاء مع الإلحاح في الدعاء موجبًا ليأسك",a:"ابن عطاء الله السكندري"},
+    {q:"إن الله لا ينظر إلى صوركم وأموالكم ولكن ينظر إلى قلوبكم وأعمالكم",a:"محمد ﷺ"},
+    {q:"إذا رأيتَ الله يُعطي العبدَ ما يحبّ وهو مُقيمٌ على معاصيه، فإنما ذلك استدراج",a:"الحسن البصري"},
+    {q:"الدنيا كلها جهل، إلا العلم، والعلم كله حجة إلا العمل، والعمل كله رياء إلا الإخلاص",a:"الإمام الغزالي"},
+    {q:"ما ضرب عبدٌ بعقوبة أعظم من قسوة القلب",a:"مالك بن دينار"},
+    {q:"إذا لم تزد شيئًا على الدنيا كنتَ زائدًا عليها",a:"مصطفى صادق الرافعي"},
+    {q:"من عرف نفسه اشتغل بإصلاحها عن عيوب الناس",a:"ابن القيم الجوزية"},
+    {q:"كلّما ازددتُ علمًا، ازددتُ علمًا بجهلي",a:"الإمام الشافعي"},
+    {q:"إذا أراد الله نشر فضيلة طويت، أتاح لها لسان حسود",a:"الإمام الشافعي"},
+    {q:"ما ألزم عبدٌ قلبَه الاستغفار إلا زُرق الطمأنينة",a:"ابن تيمية"},
+    {q:"إن العبد ليعمل الذنب فيدخل به الجنة، ويعمل الحسنة فيدخل بها النار",a:"ابن تيمية"},
+    {q:"قد يفتح الله لك باب الطاعة وما فتح لك باب القبول",a:"ابن عطاء الله السكندري"},
+    {q:"إذا أردتَ أن ينفتح لك باب الرجاء، فاشهد ما منه إليك، وإذا أردتَ أن ينفتح لك باب الخوف، فاشهد ما منك إليه",a:"ابن عطاء الله السكندري"},
+    {q:"العاقل من عرف زمانه، وأمسك لسانه",a:"سفيان الثوري"},
+    {q:"من أصلح ما بينه وبين الله، أصلح الله ما بينه وبين الناس",a:"معاذ بن جبل"},
+    {q:"ليس الشأن أن تُحب، إنما الشأن أن تُحبّ",a:"الحسن البصري"},
+    {q:"القلوب آنية الله في أرضه، فأحبّها إليه أرقّها وأصفاها",a:"عبد الله بن مسعود"},
+    {q:"أخفِ عملك كما تُخفي ذنوبك",a:"أيوب السختياني"},
+];
+
+function newQuote(){
+let i = Math.floor(Math.random()*quotes.length);
+document.getElementById("quote").innerText = quotes[i].q;
+document.getElementById("author").innerText = quotes[i].a;
+}
+
+function copyQuote(){
+navigator.clipboard.writeText(
+document.getElementById("quote").innerText +
+" - " +
+document.getElementById("author").innerText
+);
+alert("تم النسخ ");
+}
+
+function shareQuote(){
+let text =
+document.getElementById("quote").innerText +
+" - " +
+document.getElementById("author").innerText;
+
+if(navigator.share){
+navigator.share({text});
+}else{
+navigator.clipboard.writeText(text);
+alert("تم النسخ للمشاركة");
+}
+}
+
+</script>
+
+</body>
+</html>

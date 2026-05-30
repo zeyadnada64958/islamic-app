@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Islamic Luxury UI</title>
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=BBH+Hegarty&family=Blaka+Ink&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Manufacturing+Consent&family=Oi&family=Permanent+Marker&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titan+One&family=Yellowtail&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<!-- PWA MANIFEST INLINE FIX -->
+<link rel="manifest" id="app-manifest">
+<meta name="theme-color" content="#1e6a4e">
+<script src="sw.js"></script>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:
+    radial-gradient(circle at top,#1e6a4e 0%,#0e3d2f 45%,#081f18 100%);
+    overflow-x:hidden;
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.title h2{
+    font-size:55px;
+    font-family:'Cinzel',serif;
+    color:#f5dfb1;
+    letter-spacing:3px;
+}
+
+.title p{
+    color:#d5e5db;
+    margin-top:15px;
+    font-size:18px;
+}
+
+.pattern{
+    position:fixed;
+    width:100%;
+    height:100%;
+    inset:0;
+    background-image:
+    radial-gradient(rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size:30px 30px;
+    pointer-events:none;
+    z-index:-20;
+}
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.25;
+}
+
+.glow1{
+    width:400px;
+    height:400px;
+    background:#d9b57c;
+    top:-100px;
+    left:-100px;
+}
+
+.glow2{
+    width:350px;
+    height:350px;
+    background:#1d8b63;
+    right:-100px;
+    top:400px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-content{
+    margin-top: -65px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:85px;
+    line-height:1.05;
+    color:#f8ebd2;
+    margin-bottom:25px;
+    font-family:'Cinzel',serif;
+}
+
+.hero-text h1 span{
+    color:#d8b16d;
+}
+
+.hero-text p{
+    color:#dbe7df;
+    line-height:2;
+    width:90%;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:18px 38px;
+    border:none;
+    border-radius:60px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:700;
+    transition:.4s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#e6c48d,#c89752);
+    color:#183126;
+    box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+.btn-secondary{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    color:white;
+    backdrop-filter:blur(10px);
+}
+
+.btn:hover{
+    transform:translateY(-7px);
+}
+
+/* =========================
+   MOSQUE DESIGN
+========================= */
+
+.hero-art{
+    position:relative;
+    height:700px;
+    margin-right: -50px;
+}
+
+.circle-bg{
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:
+    radial-gradient(circle,#1f7c58 0%,#0e3d2f 70%);
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    box-shadow:
+    0 0 80px rgba(0,0,0,.4),
+    inset 0 0 80px rgba(255,255,255,.05);
+}
+
+/* Mosque */
+
+.mosque{
+    position:absolute;
+    bottom:150px;
+    right:125px;
+}
+
+.dome{
+    width:220px;
+    height:220px;
+    background:linear-gradient(180deg,#e6c78d,#bc8c4d);
+    border-radius:50% 50% 0 0;
+    position:relative;
+    margin:auto;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.dome::before{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:25px;
+    background:#f8e7c0;
+    border-radius:50%;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.base{
+    width:340px;
+    height:220px;
+    background:linear-gradient(180deg,#21513f,#17392d);
+    border-radius:25px;
+    margin-top:-5px;
+    position:relative;
+    box-shadow:0 25px 40px rgba(0,0,0,.4);
+}
+
+.door{
+    width:90px;
+    height:140px;
+    background:#d8b16d;
+    border-radius:50px 50px 0 0;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.minaret{
+    position:absolute;
+    width:55px;
+    height:300px;
+    background:linear-gradient(180deg,#e2c58f,#ba8a49);
+    border-radius:20px;
+    bottom:0;
+}
+
+.minaret.left{
+    left:-70px;
+}
+
+.minaret.right{
+    right:-70px;
+}
+
+.minaret::before{
+    content:"";
+    position:absolute;
+    width:70px;
+    height:70px;
+    background:#d8b16d;
+    border-radius:50% 50% 0 0;
+    top:-50px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features{
+    position:relative;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    border-radius:35px;
+    padding:40px 30px;
+    transition:.5s;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(135deg,
+    rgba(255,255,255,.12),
+    transparent);
+    opacity:0;
+    transition:.5s;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:30px;
+    font-size:38px;
+    background:
+    linear-gradient(135deg,#e4c88f,#b88643);
+    color:#183126;
+    box-shadow:
+    0 15px 25px rgba(0,0,0,.35);
+}
+
+.card h3{
+    font-size:28px;
+    margin-bottom:18px;
+    color:#f4dfb5;
+}
+
+.card p{
+    color:#d6e3db;
+    line-height:1.9;
+}
+
+/* =========================
+   VERSE SECTION
+========================= */
+
+.verse-box{
+    background:
+    linear-gradient(135deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.03));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:40px;
+    padding:70px;
+    text-align:center;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 25px 40px rgba(0,0,0,.35);
+}
+
+.verse-icon{
+    font-size:70px;
+    margin-bottom:30px;
+    color:#f0d39d;
+}
+
+.verse{
+    font-size:35px;
+    line-height:2;
+    color:#fff3d5;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.surah{
+    color:#d9b06d;
+    font-size:22px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:40px 0;
+    text-align:center;
+    color:#cbd8d0;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+/* =========================
+   MOBILE RESPONSIVE ULTRA BEAUTIFUL
+========================= */
+
+@media (max-width:950px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    /* HERO */
+
+    .hero{
+        min-height:auto;
+        padding-top:40px;
+    }
+
+    .hero-content{
+        grid-template-columns:1fr;
+        gap:20px;
+        margin-top:0;
+    }
+
+    .hero-text{
+        text-align:center;
+        order:2;
+        z-index:5;
+    }
+
+    .hero-text h1{
+        font-size:58px !important;
+        line-height:1.1;
+        margin-bottom:18px;
+        letter-spacing:1px;
+    }
+
+    .hero-text p{
+        width:100%;
+        font-size:22px !important;
+        line-height:1.7;
+        margin-bottom:30px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        gap:14px;
+    }
+
+    .btn{
+        padding:16px 28px;
+        width:100%;
+        max-width:270px;
+        font-size:18px !important;
+    }
+
+    /* HERO ART */
+
+    .hero-art{
+        order:1;
+        height:430px;
+        margin-right:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .circle-bg{
+        width:330px;
+        height:330px;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        right:auto;
+        box-shadow:
+        0 0 60px rgba(0,0,0,.5),
+        inset 0 0 40px rgba(255,255,255,.06);
+    }
+
+    .mosque{
+        right:50%;
+        bottom:45px;
+        transform:translateX(50%) scale(.78);
+    }
+
+    .dome{
+        width:180px;
+        height:180px;
+    }
+
+    .base{
+        width:280px;
+        height:180px;
+        border-radius:22px;
+    }
+
+    .door{
+        width:75px;
+        height:120px;
+    }
+
+    .minaret{
+        width:45px;
+        height:230px;
+    }
+
+    .minaret.left{
+        left:-55px;
+    }
+
+    .minaret.right{
+        right:-55px;
+    }
+
+    .minaret::before{
+        width:58px;
+        height:58px;
+        top:-40px;
+    }
+
+    /* TITLES */
+
+    .title{
+        margin-bottom:45px;
+    }
+
+    .title h2{
+        font-size:50px !important;
+        line-height:1.2;
+    }
+
+    .title p{
+        font-size:16px;
+    }
+
+    /* CARDS */
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .card{
+        padding:32px 24px;
+        border-radius:30px;
+    }
+
+    .card h3{
+        font-size:25px;
+    }
+
+    .card p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .icon{
+        width:80px;
+        height:80px;
+        font-size:34px;
+        margin-bottom:24px;
+    }
+
+    /* VERSE */
+
+    .verse-box{
+        padding:40px 25px;
+        border-radius:30px;
+    }
+
+    .verse{
+        font-size:25px;
+        line-height:2;
+    }
+
+    .surah{
+        font-size:18px;
+    }
+
+    .verse-icon{
+        font-size:50px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:30px 10px;
+    }
+
+    /* GLOWS */
+
+    .glow1{
+        width:220px;
+        height:220px;
+        top:-60px;
+        left:-60px;
+        opacity:.18;
+    }
+
+    .glow2{
+        width:220px;
+        height:220px;
+        right:-70px;
+        top:300px;
+        opacity:.18;
+    }
+}
+
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width:600px){
+
+    .hero{
+        padding-top:20px;
+    }
+
+    .hero-art{
+        height:360px;
+    }
+
+    .circle-bg{
+        width:260px;
+        height:260px;
+    }
+
+    .mosque{
+        bottom:35px;
+        transform:translateX(50%) scale(.58);
+    }
+
+    .hero-text h1{
+        font-size:42px !important;
+    }
+
+    .hero-text p{
+        font-size:18px !important;
+    }
+
+    .btn{
+        max-width:100%;
+        font-size:17px !important;
+        padding:15px 20px;
+    }
+
+    .title h2{
+        font-size:38px !important;
+    }
+
+    .verse{
+        font-size:20px;
+    }
+
+    .card{
+        padding:28px 20px;
+    }
+
+    .icon{
+        width:70px;
+        height:70px;
+        font-size:28px;
+    }
+
+}
+
+/* =========================
+   CARD ARROW + PAPER
+========================= */
+
+.card{
+    position:relative;
+}
+
+.card-arrow{
+    position:absolute;
+    bottom:25px;
+    right:25px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* PAPER */
+
+.paper{
+    background:
+    linear-gradient(135deg,#f7e7c2,#d7b073);
+
+    color:#183126;
+
+    padding:8px 18px;
+
+    border-radius:14px;
+
+    font-size:16px;
+    font-weight:800;
+
+    font-family:'Cairo',sans-serif;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.25);
+
+    transform:rotate(-4deg);
+
+    position:relative;
+}
+
+.paper::before{
+    content:"";
+    position:absolute;
+    inset:4px;
+    border:1px dashed rgba(24,49,38,.25);
+    border-radius:10px;
+}
+
+/* ARROW */
+
+.arrow-line{
+    width:55px;
+    height:3px;
+    background:#d8b16d;
+    border-radius:10px;
+    position:relative;
+}
+
+.arrow-head{
+    width:14px;
+    height:14px;
+    border-top:3px solid #d8b16d;
+    border-right:3px solid #d8b16d;
+    transform:rotate(45deg);
+    margin-left:-12px;
+}
+
+/* CARD SPACE */
+
+.card{
+    padding-bottom:95px !important;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .card-arrow{
+        bottom:20px;
+        right:20px;
+        transform:scale(.9);
+    }
+
+    .paper{
+        font-size:14px;
+        padding:7px 14px;
+    }
+
+    .arrow-line{
+        width:40px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="pattern"></div>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="container hero-content">
+
+    <div class="hero-text">
+
+        <h1 style="font-family: BBH Hegarty; font-size: 100px;">
+            Islamic <br>
+            <span style="color: #ba8a49;">Spiritual</span> Design
+        </h1>
+
+        <p style="font-family: Caveat; color: #ccc; font-size: 27px;">
+            Experience the divine beauty of Islamic spirituality through
+            our luxurious UI design.
+        </p>
+
+        <div class="hero-buttons">
+            <button onclick="goToQuraanPage()" style="font-family: Caveat; font-size: 22px;" class="btn btn-primary">
+                Read Quran
+            </button>
+
+            <button onclick="goToHadeethPage()" style="font-family: Caveat; font-size: 22px; color: #ccc;" class="btn btn-secondary">
+                Read Hadeeth
+            </button>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="hero-art">
+
+        <div class="circle-bg"></div>
+
+        <div class="mosque-wrap">
+           <div class="mosque">
+
+            <div class="minaret left"></div>
+            <div class="minaret right"></div>
+
+            <div class="dome"></div>
+
+            <div class="base">
+                <div class="door"></div>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+<div class="container">
+
+    <div class="title">
+        <h2 style="font-family: BBH Hegarty; font-size: 90px;">Islamic <span style="color: #b88643;"> Features</span></h2>
+    </div>
+
+    <div class="cards">
+
+        <div onclick="goToQuraanPage()" class="card">
+            <div class="icon">☪</div>
+            <h3>Holy Quran</h3>
+            <p>
+                Beautiful Quran section with elegant typography,
+                smooth animations and modern islamic atmosphere.
+            </p>
+            <div class="card-arrow">
+    <div class="paper">القران الكريم</div>
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+</div>
+        </div>
+
+        <div onclick="goToPrayerPage()" class="card">
+            <div class="icon">⏱</div>
+            <h3>Prayer Times</h3>
+            <p>
+                Stunning prayer cards inspired by luxury mosque
+                architecture and golden arabic aesthetics.
+            </p>
+            <div class="card-arrow">
+    <div class="paper">مواقيت الصلوات</div>
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+</div>
+        </div>
+
+        <div onclick="goToAzkarPage()" class="card">
+            <div class="icon">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="41" height="41"  
+          fill="currentColor" viewBox="0 0 24 24" >
+          <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+          <path d="M22 7.5C22 4.47 19.53 2 16.5 2c-1.86 0-3.5.93-4.5 2.35C11 2.93 9.36 2 7.5 2A5.51 5.51 0 0 0 2 7.5c0 1.86.93 3.5 2.35 4.5C2.93 13 2 14.64 2 16.5 2 19.53 4.47 22 7.5 22c1.86 0 3.5-.93 4.5-2.35 1 1.42 2.64 2.35 4.5 2.35 3.03 0 5.5-2.47 5.5-5.5 0-1.86-.93-3.5-2.35-4.5C21.07 11 22 9.36 22 7.5M15 12v.02c-.02 1.66-1.32 2.96-3.02 2.98-1.65-.01-2.96-1.32-2.98-3.02.02-1.66 1.32-2.96 3.02-2.98 1.65.01 2.96 1.32 2.98 2.98zM7.5 4c1.8 0 3.28 1.36 3.48 3.1h-.01c-.01 0-.03 0-.04.01-.28.06-.55.15-.81.25l-.21.09a5.4 5.4 0 0 0-.77.44c-.5.35-.94.79-1.28 1.3 0 0 0 .01-.01.02-.35.53-.61 1.12-.74 1.76-1.74-.2-3.1-1.68-3.1-3.48 0-1.93 1.57-3.5 3.5-3.5Zm0 16C5.57 20 4 18.43 4 16.5c0-1.8 1.36-3.28 3.1-3.48v.01c0 .02.01.03.01.05.06.28.15.54.25.8.03.07.06.14.1.21.1.21.21.42.34.61a4.95 4.95 0 0 0 1.4 1.43s.01 0 .02.01c.53.35 1.11.61 1.76.74-.2 1.74-1.68 3.1-3.48 3.1Zm9 0c-1.8 0-3.28-1.36-3.48-3.1h.01c.02 0 .03 0 .05-.01.28-.06.54-.15.8-.25.08-.03.16-.07.23-.11.2-.09.38-.19.56-.31.07-.04.14-.08.21-.13.47-.33.88-.74 1.21-1.21.04-.06.08-.13.12-.19.12-.19.23-.39.32-.59.03-.07.07-.14.09-.21.11-.28.21-.56.27-.86 1.74.2 3.1 1.68 3.1 3.48 0 1.93-1.57 3.5-3.5 3.5Zm.4-9.02v-.01c0-.02-.01-.03-.01-.05-.06-.28-.15-.54-.25-.8-.03-.07-.06-.14-.1-.21-.1-.21-.21-.42-.34-.61a4.95 4.95 0 0 0-1.4-1.43s-.01 0-.02-.01a4.9 4.9 0 0 0-1.76-.74c.2-1.74 1.68-3.1 3.48-3.1 1.93 0 3.5 1.57 3.5 3.5 0 1.8-1.36 3.28-3.1 3.48Z"></path>
+          </svg>
+            </div>
+            <h3>Azkar</h3>
+            <p>
+                Peaceful remembrance interface with calm colors,
+                glassmorphism and premium spiritual design.
+            </p>
+            <div class="card-arrow">
+    <div class="paper">الأذكار</div>
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+</div>
+        </div>
+
+        <div onclick="goToIslamicQuotesPage()" class="card">
+            <div class="icon">❛❛ ❜❜</div>
+            <h3>Islamic Quotes</h3>
+            <p>
+                Elegant sections for hadith and inspiring islamic
+                wisdom with beautiful luxury layouts.
+            </p>
+            <div class="card-arrow">
+    <div class="paper">اقتباسات اسلامية</div>
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+</div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- VERSE -->
+<section>
+
+<div class="container">
+
+    <div class="verse-box">
+
+        <div class="verse-icon">❁</div>
+
+        <div style="font-family: Aref Ruqaa Ink; font-size: 70px;" class="verse">
+            وَقُل رَّبِّ زِدْنِي عِلْمًا
+        </div>
+
+        <div class="surah">
+            Surah Taha - 114
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    Developed by <span style="color: #c89752;">Zeyad Nada</span> ✦
+</footer>
+
+<script>
+
+/* Floating animation */
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const x = e.offsetX;
+        const y = e.offsetY;
+
+        card.style.background =
+        `radial-gradient(circle at ${x}px ${y}px,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.05))`;
+
+    });
+
+});
+
+function goToPrayerPage() {
+    window.location.href = "prayer.html";
+}
+
+function goToAzkarPage() {
+    window.location.href = "azkar.html";
+}
+
+function goToHadeethPage() {
+    window.location.href = "hadeeth.html";
+}
+
+function goToQuraanPage() {
+    window.location.href = "quraan.html"
+}
+
+function goToIslamicQuotesPage() {
+    window.location.href = "IslamicQuotes.html"
+}
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"));
+}
+
+// ===============================
+// INLINE PWA MANIFEST FIX (NO FILE NEEDED)
+// ===============================
+const manifest = {
+  name: "Islamic Spiritual App",
+  short_name: "Islamic App",
+  start_url: ".",
+  display: "standalone",
+  background_color: "#0e3d2f",
+  theme_color: "#1e6a4e",
+  icons: [
+    {
+      src: "https://cdn-icons-png.flaticon.com/512/3771/3771407.png",
+      sizes: "192x192",
+      type: "image/png"
+    },
+    {
+      src: "https://cdn-icons-png.flaticon.com/512/3771/3771407.png",
+      sizes: "512x512",
+      type: "image/png"
+    }
+  ]
+};
+
+// create blob URL for manifest
+const blob = new Blob([JSON.stringify(manifest)], { type: "application/json" });
+const manifestURL = URL.createObjectURL(blob);
+document.querySelector("#app-manifest").setAttribute("href", manifestURL);
+</script>
+
+</body>
+</html>
